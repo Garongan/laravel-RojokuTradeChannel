@@ -177,7 +177,7 @@
                                 <div class="card-body">
                                 <p class="card-title">Produk 1</p>
                                 <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                <a href="single-produk.html" class="btn button-primary d-flex">
+                                <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                 </a>
                                 </div>
@@ -187,7 +187,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 2</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -197,7 +197,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 3</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -207,7 +207,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 4</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -217,7 +217,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 5</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -227,7 +227,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 6</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -237,7 +237,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 7</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -247,7 +247,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 8</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -257,7 +257,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 1</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -267,7 +267,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 2</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -277,7 +277,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 3</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -287,7 +287,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 1</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -297,7 +297,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 2</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -307,7 +307,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 3</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -317,7 +317,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 1</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -327,7 +327,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 2</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -337,7 +337,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 3</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -347,7 +347,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 1</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -357,7 +357,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 2</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -367,7 +367,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 3</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -377,7 +377,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 1</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -387,7 +387,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 2</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>
@@ -397,7 +397,7 @@
                                 <div class="card-body">
                                     <p class="card-title">Produk 4</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex">
+                                    <a href="/product-detail" class="btn button-primary d-flex">
                                     Lihat
                                     </a>
                                 </div>

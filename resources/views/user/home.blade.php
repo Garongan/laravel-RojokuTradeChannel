@@ -287,7 +287,7 @@
                                     <div class="card-body">
                                     <p class="card-title">Produk 1</p>
                                     <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                    <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                     </a>
                                     </div>
@@ -297,7 +297,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 2</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -307,7 +307,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 3</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -317,7 +317,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 4</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -327,7 +327,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 5</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -337,7 +337,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 6</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -347,7 +347,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 7</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -357,7 +357,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 8</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -367,7 +367,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 1</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -377,7 +377,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 2</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -387,7 +387,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 3</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -397,7 +397,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 1</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -407,7 +407,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 2</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -417,7 +417,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 3</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -427,7 +427,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 1</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -437,7 +437,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 2</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -447,7 +447,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 3</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -457,7 +457,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 1</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -467,7 +467,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 2</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -477,7 +477,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 3</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -487,7 +487,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 1</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -497,7 +497,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 2</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -507,7 +507,7 @@
                                     <div class="card-body">
                                         <p class="card-title">Produk 4</p>
                                         <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="single-produk.html" class="btn button-primary d-flex mt-3">
+                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
                                         Lihat
                                         </a>
                                     </div>
@@ -571,7 +571,7 @@
                                             <p class="card-text"><small class="text-muted">Berita</small></p>
                                             <h5 class="card-title">Judul Berita</h5>
                                             <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                                            <a href="single-berita.html" class="btn button-primary d-flex mt-3">
+                                            <a href="/news-detail" class="btn button-primary d-flex mt-3">
                                                 Lihat
                                             </a>
                                         </div>
@@ -590,7 +590,7 @@
                                             <p class="card-text"><small class="text-muted">Pengumuman</small></p>
                                             <h5 class="card-title">Judul Pengumuman</h5>
                                             <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                                            <a href="single-berita.html" class="btn button-primary d-flex mt-3">
+                                            <a href="/news-detail" class="btn button-primary d-flex mt-3">
                                                 Lihat
                                             </a>
                                         </div>
@@ -609,7 +609,7 @@
                                             <p class="card-text"><small class="text-muted">Berita</small></p>
                                             <h5 class="card-title">Judul Berita</h5>
                                             <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                                            <a href="single-berita.html" class="btn button-primary d-flex mt-3">
+                                            <a href="/news-detail" class="btn button-primary d-flex mt-3">
                                                 Lihat
                                             </a>
                                         </div>
@@ -628,7 +628,7 @@
                                             <p class="card-text"><small class="text-muted">Pengumuman</small></p>
                                             <h5 class="card-title">Judul Pengumuman</h5>
                                             <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                                            <a href="single-berita.html" class="btn button-primary d-flex mt-3">
+                                            <a href="/news-detail" class="btn button-primary d-flex mt-3">
                                                 Lihat
                                             </a>
                                         </div>
@@ -647,7 +647,7 @@
                                             <p class="card-text"><small class="text-muted">Berita</small></p>
                                             <h5 class="card-title">Judul Berita</h5>
                                             <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                                            <a href="single-berita.html" class="btn button-primary d-flex mt-3">
+                                            <a href="/news-detail" class="btn button-primary d-flex mt-3">
                                                 Lihat
                                             </a>
                                         </div>
@@ -666,7 +666,7 @@
                                             <p class="card-text"><small class="text-muted">Pengumuman</small></p>
                                             <h5 class="card-title">Judul Pengumuman</h5>
                                             <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                                            <a href="single-berita.html" class="btn button-primary d-flex mt-3">
+                                            <a href="/news-detail" class="btn button-primary d-flex mt-3">
                                                 Lihat
                                             </a>
                                         </div>
@@ -685,7 +685,7 @@
                                             <p class="card-text"><small class="text-muted">Berita</small></p>
                                             <h5 class="card-title">Judul Berita</h5>
                                             <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                                            <a href="single-berita.html" class="btn button-primary d-flex mt-3">
+                                            <a href="/news-detail" class="btn button-primary d-flex mt-3">
                                                 Lihat
                                             </a>
                                         </div>
@@ -704,7 +704,7 @@
                                             <p class="card-text"><small class="text-muted">Pengumuman</small></p>
                                             <h5 class="card-title">Judul Pengumuman</h5>
                                             <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                                            <a href="single-berita.html" class="btn button-primary d-flex mt-3">
+                                            <a href="/news-detail" class="btn button-primary d-flex mt-3">
                                                 Lihat
                                             </a>
                                         </div>
@@ -764,7 +764,7 @@
                                             Info Bisnis 1</a></h4>
                                     <p class="mt-3">At corrupti odit At iure facere,
                                         porro repellat officia quas, magnam assumenda.</p>
-                                        <a href="single-bisnis-kelas.html" href="single-bisnis-kelas.html" class="d-flex mt-3 text-decoration-underline">
+                                        <a href="/bussines-class-detail" href="/bussines-class-detail" class="d-flex mt-3 text-decoration-underline">
                                             Lihat Informasi
                                         </a>
                                 </div>
@@ -785,7 +785,7 @@
                                         Info Bisnis 2</a></h4>
                                     <p class="mt-3">At corrupti odit At iure facere,
                                         porro repellat officia quas, magnam assumenda.</p>
-                                        <a href="single-bisnis-kelas.html" class="d-flex mt-3 text-decoration-underline">
+                                        <a href="/bussines-class-detail" class="d-flex mt-3 text-decoration-underline">
                                             Lihat Informasi
                                         </a>
                                 </div>
@@ -806,7 +806,7 @@
                                         Info Bisnis 3</a></h4>
                                     <p class="mt-3">At corrupti odit At iure facere,
                                         porro repellat officia quas, magnam assumenda.</p>
-                                        <a href="single-bisnis-kelas.html" class="d-flex mt-3 text-decoration-underline">
+                                        <a href="/bussines-class-detail" class="d-flex mt-3 text-decoration-underline">
                                             Lihat Informasi
                                         </a>
                                 </div>
@@ -827,7 +827,7 @@
                                         Info Bisnis 4</a></h4>
                                     <p class="mt-3">At corrupti odit At iure facere,
                                         porro repellat officia quas, magnam assumenda.</p>
-                                        <a href="single-bisnis-kelas.html" class="d-flex mt-3 text-decoration-underline">
+                                        <a href="/bussines-class-detail" class="d-flex mt-3 text-decoration-underline">
                                             Lihat Informasi
                                         </a>
                                 </div>
@@ -848,7 +848,7 @@
                                         Info Bisnis 5</a></h4>
                                     <p class="mt-3">At corrupti odit At iure facere,
                                         porro repellat officia quas, magnam assumenda.</p>
-                                        <a href="single-bisnis-kelas.html" class="d-flex mt-3 text-decoration-underline">
+                                        <a href="/bussines-class-detail" class="d-flex mt-3 text-decoration-underline">
                                             Lihat Informasi
                                         </a>
                                 </div>
@@ -869,7 +869,7 @@
                                         Info Bisnis 6</a></h4>
                                     <p class="mt-3">At corrupti odit At iure facere,
                                         porro repellat officia quas, magnam assumenda.</p>
-                                        <a href="single-bisnis-kelas.html" class="d-flex mt-3 text-decoration-underline">
+                                        <a href="/bussines-class-detail" class="d-flex mt-3 text-decoration-underline">
                                             Lihat Informasi
                                         </a>
                                 </div>
@@ -890,7 +890,7 @@
                                         Info Bisnis 7</a></h4>
                                     <p class="mt-3">At corrupti odit At iure facere,
                                         porro repellat officia quas, magnam assumenda.</p>
-                                        <a href="single-bisnis-kelas.html" class="d-flex mt-3 text-decoration-underline">
+                                        <a href="/bussines-class-detail" class="d-flex mt-3 text-decoration-underline">
                                             Lihat Informasi
                                         </a>
                                 </div>
@@ -911,7 +911,7 @@
                                         Info Bisnis 8</a></h4>
                                     <p class="mt-3">At corrupti odit At iure facere,
                                         porro repellat officia quas, magnam assumenda.</p>
-                                        <a href="single-bisnis-kelas.html" class="d-flex mt-3 text-decoration-underline">
+                                        <a href="/bussines-class-detail" class="d-flex mt-3 text-decoration-underline">
                                             Lihat Informasi
                                         </a>
                                 </div>

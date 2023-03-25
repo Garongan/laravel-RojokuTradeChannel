@@ -17514,6 +17514,16 @@ h4.inner-text-title {
 
 /* custom css */
 
+.logout-button:hover p{
+  display: block;
+  position: absolute;
+  color: var(--primary-color);
+}
+
+.logout-button p{
+  display: none;
+}
+
 /* style add product */
 
 .tm-bg-primary-dark {

@@ -25,7 +25,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
                     <ul class="navbar-nav my-3 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item">
-                            <a class="nav-link {{ ($title === "Home") ? 'active' : "" }}" aria-current="page" href="/">Home</a>
+                            <a class="nav-link {{ ( ($title === "Home") || ($title === "Detail") ) ? 'active' : "" }}" aria-current="page" href="/">Home</a>
                         </li>
                         <div class="pembatas-navbar"><span>|</span></div>
                         <li class="nav-item">
@@ -45,7 +45,7 @@
                         </li>
                         <span class="pembatas-navbar">|</span>
                         <li class="nav-item">
-                            <a class="nav-link {{ ($title === "Contact") ? 'active' : "" }}" href="/contact">Contact Us</a>
+                            <a class="nav-link {{ ($title === "Contact Us") ? 'active' : "" }}" href="/contact">Contact Us</a>
                         </li>
                     </ul>
                     <form action="#error" method="GET" class="d-flex search-header">
