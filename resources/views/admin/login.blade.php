@@ -15,14 +15,15 @@
                     <img src="assets/images/logo1.png" class="img-fluid logo" alt="">
                 </div>
                 <div class="col-12 col-md-4">
-                    <form action="/admin/dashboard" method="post">
+                    <form action="/admin" method="post">
+                        @csrf
                         <div class="mb-3 mt-1">
-                            <label for="username" class="form-label">Username</label>
-                            <input type="text" class="form-control" name="username" id="username" placeholder="Username..." autofocus>
+                            <label for="name" class="form-label">Username</label>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Username..." autofocus required>
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" name="form-password" id="form-password" placeholder="Password..." autofocus>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password..." autofocus required>
                         </div>
                         <div class="d-flex justify-content-center my-4">
                             <button type="submit" class="btn button-primary">

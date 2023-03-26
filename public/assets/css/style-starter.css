@@ -8273,7 +8273,7 @@ fieldset:disabled .btn {
 
 /* rtl:end:remove */
 .text-primary {
-  color: var(--primary-color) !important;
+  color: var(--primary-color);
 }
 
 .text-secondary {
@@ -12997,8 +12997,12 @@ a.btn-style-primary i {
 /* title style */
 h3.title-style {
   margin-top: 1rem;
-  color: #FF9830;
+  color: var(--primary-color);
   font-weight: bold;
+}
+
+h3.title-style:hover {
+  color: var(--secondary-color);
 }
 
 .content-block-title-style {

@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -137,27 +140,15 @@ Route::get('/bussines-class-detail', function () {
 
 // login
 
-Route::get('/admin', function () {
-    return view(
-        'admin/login',
-        [
-            "title" => "Login"
-        ]
-    );
-});
+Route::get('/admin', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/admin', [LoginController::class, 'authenticate'] );
+Route::post('/logout', [LoginController::class, 'logout'] );
 
 // login end
 
 // dashboard
 
-Route::get('/admin/dashboard', function () {
-    return view(
-        'admin/dashboard',
-        [
-            "title" => "Dashboard"
-        ]
-    );
-});
+Route::get('/admin/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
 // dashboard end
 

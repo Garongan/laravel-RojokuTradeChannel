@@ -116,7 +116,7 @@
             <!-- /product -->
 
             <!-- news -->
-            <div class="col-4 col-md-4 text-center">
+            <div class="col-12 col-md-4 text-center">
 
                 <!-- header create produk -->
                 <h3 class="title-style mb-3">News List</h3>
@@ -221,7 +221,7 @@
             <!-- /news -->
 
             <!-- informasi bisnis -->
-            <div class="col-4 col-md-4 text-center">
+            <div class="col-12 col-md-4 text-center">
 
                 <!-- header create produk -->
                 <h3 class="title-style mb-3">Bussines Class List</h3>
