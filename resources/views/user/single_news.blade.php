@@ -13,7 +13,7 @@
             <div class="col-lg-8">
                 <!-- Blog Detail Start -->
                 <div class="mb-5">
-                    <img class="img-fluid w-100 rounded mb-5" src="assets/images/b1.jpg" alt="">
+                    <img class="img-fluid w-100 rounded mb-5" src="/assets/images/b1.jpg" alt="">
                     <h1 class="text-uppercase mb-4">
                         Diam dolor duo ipsum clita sed lorem tempor. Clita kasd diam justo diam
                         lorem sed amet sed rebum eos.
@@ -36,32 +36,32 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas hic minima at
                     <h3 class="text-uppercase mb-4">Recent Post</h3>
                     <div class="bg-secon rounded shadow p-4">
                         <div class="d-flex mb-3">
-                            <img class="img-fluid" src="assets/images/b1.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                            <img class="img-fluid" src="/assets/images/b1.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
                             <a href="" class="h6 d-flex align-items-center bg-white text-uppercase px-3 mb-0">Lorem ipsum dolor sit amet consec adipis
                             </a>
                         </div>
                         <div class="d-flex mb-3">
-                            <img class="img-fluid" src="assets/images/b2.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                            <img class="img-fluid" src="/assets/images/b2.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
                             <a href="" class="h6 d-flex align-items-center bg-white text-uppercase px-3 mb-0">Lorem ipsum dolor sit amet consec adipis
                             </a>
                         </div>
                         <div class="d-flex mb-3">
-                            <img class="img-fluid" src="assets/images/b3.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                            <img class="img-fluid" src="/assets/images/b3.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
                             <a href="" class="h6 d-flex align-items-center bg-white text-uppercase px-3 mb-0">Lorem ipsum dolor sit amet consec adipis
                             </a>
                         </div>
                         <div class="d-flex mb-3">
-                            <img class="img-fluid" src="assets/images/b4.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                            <img class="img-fluid" src="/assets/images/b4.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
                             <a href="" class="h6 d-flex align-items-center bg-white text-uppercase px-3 mb-0">Lorem ipsum dolor sit amet consec adipis
                             </a>
                         </div>
                         <div class="d-flex mb-3">
-                            <img class="img-fluid" src="assets/images/b1.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                            <img class="img-fluid" src="/assets/images/b1.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
                             <a href="" class="h6 d-flex align-items-center bg-white text-uppercase px-3 mb-0">Lorem ipsum dolor sit amet consec adipis
                             </a>
                         </div>
                         <div class="d-flex">
-                            <img class="img-fluid" src="assets/images/b2.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                            <img class="img-fluid" src="/assets/images/b2.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
                             <a href="" class="h6 d-flex align-items-center bg-white text-uppercase px-3 mb-0">Lorem ipsum dolor sit amet consec adipis
                             </a>
                         </div>

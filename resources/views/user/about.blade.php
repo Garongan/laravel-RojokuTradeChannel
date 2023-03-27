@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-lg-5 py-5">
                     <div class="position-relative bg-dark-radial h-100 pb-3 ms-3">
-                        <img src="assets/images/blog4.jpg" class="w-100 h-100 mt-3 ms-n3" alt="profile-pic" style="object-fit: cover;">
+                        <img src="/assets/images/blog4.jpg" class="w-100 h-100 mt-3 ms-n3" alt="profile-pic" style="object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                     <div class="teams-gd">
                         <div class="team-member">
                             <div class="team-img">
-                                <a href="#team"><img class="img-fluid img-responsive" src="assets/images/team1.jpg"
+                                <a href="#team"><img class="img-fluid img-responsive" src="/assets/images/team1.jpg"
                                         alt=""></a>
                             </div>
                             <div class="team-hover">
@@ -74,7 +74,7 @@
                     <div class="teams-gd">
                         <div class="team-member">
                             <div class="team-img">
-                                <a href="#team"><img class="img-fluid img-responsive" src="assets/images/team2.jpg"
+                                <a href="#team"><img class="img-fluid img-responsive" src="/assets/images/team2.jpg"
                                         alt=""></a>
                             </div>
                             <div class="team-hover">
@@ -99,7 +99,7 @@
                     <div class="teams-gd">
                         <div class="team-member">
                             <div class="team-img">
-                                <a href="#team"><img class="img-fluid img-responsive" src="assets/images/team3.jpg"
+                                <a href="#team"><img class="img-fluid img-responsive" src="/assets/images/team3.jpg"
                                         alt=""></a>
                             </div>
                             <div class="team-hover">
@@ -124,7 +124,7 @@
                     <div class="teams-gd">
                         <div class="team-member">
                             <div class="team-img">
-                                <a href="#team"><img class="img-fluid img-responsive" src="assets/images/team4.jpg"
+                                <a href="#team"><img class="img-fluid img-responsive" src="/assets/images/team4.jpg"
                                         alt=""></a>
                             </div>
                             <div class="team-hover">
@@ -166,7 +166,7 @@
                             et.
                         </blockquote>
                         <div class="customer-img d-flex align-items-center mt-4">
-                            <img src="assets/images/testi1.jpg" class="img-fluid me-3" alt="" />
+                            <img src="/assets/images/testi1.jpg" class="img-fluid me-3" alt="" />
                             <div class="customer-info">
                                 <h6>Theo Hall</h6>
                                 <small class="mb-0">Subtitle goes here</small>
@@ -185,7 +185,7 @@
                             et.
                         </blockquote>
                         <div class="customer-img d-flex align-items-center mt-4">
-                            <img src="assets/images/testi2.jpg" class="img-fluid me-3" alt="" />
+                            <img src="/assets/images/testi2.jpg" class="img-fluid me-3" alt="" />
                             <div class="customer-info">
                                 <h6>Jenna John</h6>
                                 <small class="mb-0">Subtitle goes here</small>
@@ -204,7 +204,7 @@
                             et.
                         </blockquote>
                         <div class="customer-img d-flex align-items-center mt-4">
-                            <img src="assets/images/testi3.jpg" class="img-fluid me-3" alt="" />
+                            <img src="/assets/images/testi3.jpg" class="img-fluid me-3" alt="" />
                             <div class="customer-info">
                                 <h6>William Due</h6>
                                 <small class="mb-0">Subtitle goes here</small>
@@ -223,7 +223,7 @@
                             et.
                         </blockquote>
                         <div class="customer-img d-flex align-items-center mt-4">
-                            <img src="assets/images/testi1.jpg" class="img-fluid me-3" alt="" />
+                            <img src="/assets/images/testi1.jpg" class="img-fluid me-3" alt="" />
                             <div class="customer-info">
                                 <h6>Theo Hall</h6>
                                 <small class="mb-0">Subtitle goes here</small>
@@ -242,7 +242,7 @@
                             et.
                         </blockquote>
                         <div class="customer-img d-flex align-items-center mt-4">
-                            <img src="assets/images/testi2.jpg" class="img-fluid me-3" alt="" />
+                            <img src="/assets/images/testi2.jpg" class="img-fluid me-3" alt="" />
                             <div class="customer-info">
                                 <h6>Jenna John</h6>
                                 <small class="mb-0">Subtitle goes here</small>
@@ -261,7 +261,7 @@
                             et.
                         </blockquote>
                         <div class="customer-img d-flex align-items-center mt-4">
-                            <img src="assets/images/testi3.jpg" class="img-fluid me-3" alt="" />
+                            <img src="/assets/images/testi3.jpg" class="img-fluid me-3" alt="" />
                             <div class="customer-info">
                                 <h6>William Due</h6>
                                 <small class="mb-0">Subtitle goes here</small>

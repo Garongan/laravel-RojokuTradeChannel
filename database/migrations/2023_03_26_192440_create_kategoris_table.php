@@ -13,9 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('login_models', function (Blueprint $table) {
-            $table->string('username');
-            $table->string('password');
+        Schema::create('kategoris', function (Blueprint $table) {
+            $table->id();
+            $table->string('name')->unique();
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('login_models');
+        Schema::dropIfExists('kategoris');
     }
 };

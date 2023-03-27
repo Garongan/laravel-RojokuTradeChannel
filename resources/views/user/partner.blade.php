@@ -44,56 +44,56 @@
                 <div class="col-3">
                     <div class="box-wrap">
                         <div class="square-holder">
-                            <img src="assets/images/logo-agincourt.png" alt="">
+                            <img src="/assets/images/logo-agincourt.png" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="box-wrap">
                         <div class="square-holder">
-                            <img src="assets/images/logo-ballooney.png" alt="">
+                            <img src="/assets/images/logo-ballooney.png" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="box-wrap">
                         <div class="square-holder">
-                            <img src="assets/images/logo-jasatirta.png" alt="">
+                            <img src="/assets/images/logo-jasatirta.png" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="box-wrap">
                         <div class="square-holder">
-                            <img src="assets/images/logo-mandiri.png" alt="">
+                            <img src="/assets/images/logo-mandiri.png" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="box-wrap">
                         <div class="square-holder">
-                            <img src="assets/images/logo-agincourt.png" alt="">
+                            <img src="/assets/images/logo-agincourt.png" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="box-wrap">
                         <div class="square-holder">
-                            <img src="assets/images/logo-ballooney.png" alt="">
+                            <img src="/assets/images/logo-ballooney.png" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="box-wrap">
                         <div class="square-holder">
-                            <img src="assets/images/logo-jasatirta.png" alt="">
+                            <img src="/assets/images/logo-jasatirta.png" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="box-wrap">
                         <div class="square-holder">
-                            <img src="assets/images/logo-mandiri.png" alt="">
+                            <img src="/assets/images/logo-mandiri.png" alt="">
                         </div>
                     </div>
                 </div>

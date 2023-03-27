@@ -24,8 +24,8 @@
                         </div>
                         
                     </div>
-                    <div class="col-xl-6 col-lg-6 col-md-12">
-                      <div class="tm-product-img-dummy mx-auto">
+                    <div class="col-xl-6 col-lg-6 col-md-12 mt-4">
+                      <div class="tm-product-img-dummy mx-auto" style="height: 240px">
                         <i class="tm-upload-icon" onclick="document.getElementById('fileInput').click();">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M11 20H6.5q-2.275 0-3.888-1.575T1 14.575q0-1.95 1.175-3.475T5.25 9.15q.625-2.3 2.5-3.725T12 4q2.925 0 4.963 2.038T19 11q1.725.2 2.863 1.488T23 15.5q0 1.875-1.313 3.188T18.5 20H13v-7.15l1.6 1.55L16 13l-4-4l-4 4l1.4 1.4l1.6-1.55V20Z"/></svg>
                         </i>

@@ -1,8 +1,12 @@
 <?php
 
+use App\Http\Controllers\AdminProdukController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProdukController;
+use App\Models\Kategori;
+use App\Models\Produk;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,11 +23,13 @@ use Illuminate\Support\Facades\Route;
 // user
 
 // home
-Route::get('/', function () {
+Route::get('/', function (Produk $produk, Kategori $kategori) {
     return view(
         'user/home',
         [
-            "title" => "Home"
+            "title" => "Home",
+            "produk" => $produk::all(),
+            "kategori" => $kategori::all()
         ]
     );
 });
@@ -45,14 +51,7 @@ Route::get('/about', function () {
 
 // product
 
-Route::get('/product', function () {
-    return view(
-        'user/product',
-        [
-            "title" => "Produk"
-        ]
-    );
-});
+Route::resource('/produk', ProdukController::class);
 
 // product end
 
@@ -97,14 +96,7 @@ Route::get('/contact', function () {
 
 // produk detail
 
-Route::get('/product-detail', function () {
-    return view(
-        'user/single_product',
-        [
-            "title" => "Detail"
-        ]
-    );
-});
+Route::get('/product-detail/{produk:name}', [ProdukController::class, 'show']);
 
 // detail
 
@@ -148,9 +140,23 @@ Route::post('/logout', [LoginController::class, 'logout'] );
 
 // dashboard
 
-Route::get('/admin/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/admin/dashboard', function(Produk $produk, Kategori $kategori) {
+    return view(
+        'admin/dashboard',
+        [
+            "title" => "Dashboard",
+            "produk" => $produk::all(),
+            "kategori" => $kategori::all()
+        ]
+    );
+})->middleware('auth');
 
 // dashboard end
+
+// produk
+
+Route::resource('/admin/produk', AdminProdukController::class)->middleware('auth');
+// produk end
 
 // create info bisnis
 
@@ -161,20 +167,13 @@ Route::get('/admin/create-info-bisnis', function () {
             "title" => "Create Informasi Bisnis"
         ]
     );
-});
+})->middleware('auth');
 
 // create info bisnis end
 
 // create produk
 
-Route::get('/admin/create-produk', function () {
-    return view(
-        'admin/create_produk',
-        [
-            "title" => "Create Produk"
-        ]
-    );
-});
+Route::get('/admin/create-produk', [ProdukController::class, 'create'])->middleware('auth');
 
 // create produk end
 
@@ -187,7 +186,7 @@ Route::get('/admin/create-news', function () {
             "title" => "Create News"
         ]
     );
-});
+})->middleware('auth');
 
 // create produk end
 
@@ -200,7 +199,7 @@ Route::get('/admin/update-info-bisnis', function () {
             "title" => "Edit Informasi Bisnis"
         ]
     );
-});
+})->middleware('auth');
 
 // update informasi bisnis end
 
@@ -213,7 +212,7 @@ Route::get('/admin/update-news', function () {
             "title" => "Edit News"
         ]
     );
-});
+})->middleware('auth');
 
 // update informasi bisnis end
 
@@ -226,7 +225,7 @@ Route::get('/admin/update-produk', function () {
             "title" => "Edit Produk"
         ]
     );
-});
+})->middleware('auth');
 
 // update produk end
 
@@ -239,4 +238,4 @@ Route::get('/admin/tambah-pelanggan', function () {
             "title" => "Tambah Pelanggan"
         ]
     );
-});
+})->middleware('auth');

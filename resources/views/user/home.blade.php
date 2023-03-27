@@ -165,100 +165,24 @@
                             <ul class="container d-flex hide-scrollbar flex-nowrap row flex-row rounded" id="isi-kategori" style="overflow-x: scroll;">
                                 <li class="kategori-list" style="width: 10rem;">
                                     <button type="button" class="active border-0 scrollToProduk" onclick="filterSelection('all')">
-                                        <img loading="lazy" src="assets/images/s8.jpg" class="card-img-top mt-3" alt="all produk">
+                                        <img loading="lazy" src="/assets/images/s8.jpg" class="card-img-top mt-3" alt="all produk">
                                         <div class="card-body">
                                             <p class="card-text">All Produk</p>
                                         </div>
                                     </button>
                                 </li>
+
+                                @foreach ($kategori as $item)
                                 <li class="kategori-list" style="width: 10rem;">
-                                    <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('kategori-1')">
-                                        <img loading="lazy" src="assets/images/s1.jpg" class="card-img-top mt-3" alt="kategori 1">
+                                    <button type="button" class="active border-0 scrollToProduk" onclick="filterSelection('{{ $item->name }}')">
+                                        <img loading="lazy" src="/assets/images/s{{ $item->id }}.jpg" class="card-img-top mt-3" alt="{{ $item->name }}">
                                         <div class="card-body">
-                                            <p class="card-text">Kategori 1</p>
+                                            <p class="card-text">{{ $item->name }}</p>
                                         </div>
                                     </button>
                                 </li>
-                                <li class="kategori-list" style="width: 10rem;">
-                                    <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('kategori-2')">
-                                        <img loading="lazy" src="assets/images/s2.jpg" class="card-img-top mt-3" alt="kategori 2">
-                                        <div class="card-body">
-                                            <p class="card-text">Kategori 2</p>
-                                        </div>
-                                    </button>
-                                </li>
-                                <li class="kategori-list" style="width: 10rem;">
-                                    <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('kategori-3')">
-                                        <img loading="lazy" src="assets/images/s3.jpg" class="card-img-top mt-3" alt="kategori 3">
-                                        <div class="card-body">
-                                            <p class="card-text">Kategori 3</p>
-                                        </div>
-                                    </button>
-                                </li>
-                                <li class="kategori-list" style="width: 10rem;">
-                                    <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('all')">
-                                        <img loading="lazy" src="assets/images/s8.jpg" class="card-img-top mt-3" alt="all produk">
-                                        <div class="card-body">
-                                            <p class="card-text">All Produk</p>
-                                        </div>
-                                    </button>
-                                </li>
-                                <li class="kategori-list" style="width: 10rem;">
-                                    <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('kategori-1')">
-                                        <img loading="lazy" src="assets/images/s1.jpg" class="card-img-top mt-3" alt="kategori 1">
-                                        <div class="card-body">
-                                            <p class="card-text">Kategori 1</p>
-                                        </div>
-                                    </button>
-                                </li>
-                                <li class="kategori-list" style="width: 10rem;">
-                                    <button type="button" class="active border-0 scrollToProduk" onclick="filterSelection('all')">
-                                        <img loading="lazy" src="assets/images/s8.jpg" class="card-img-top mt-3" alt="all produk">
-                                        <div class="card-body">
-                                            <p class="card-text">All Produk</p>
-                                        </div>
-                                    </button>
-                                </li>
-                                <li class="kategori-list" style="width: 10rem;">
-                                    <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('kategori-1')">
-                                        <img loading="lazy" src="assets/images/s1.jpg" class="card-img-top mt-3" alt="kategori 1">
-                                        <div class="card-body">
-                                            <p class="card-text">Kategori 1</p>
-                                        </div>
-                                    </button>
-                                </li>
-                                <li class="kategori-list" style="width: 10rem;">
-                                    <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('kategori-2')">
-                                        <img loading="lazy" src="assets/images/s2.jpg" class="card-img-top mt-3" alt="kategori 2">
-                                        <div class="card-body">
-                                            <p class="card-text">Kategori 2</p>
-                                        </div>
-                                    </button>
-                                </li>
-                                <li class="kategori-list" style="width: 10rem;">
-                                    <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('kategori-3')">
-                                        <img loading="lazy" src="assets/images/s3.jpg" class="card-img-top mt-3" alt="kategori 3">
-                                        <div class="card-body">
-                                            <p class="card-text">Kategori 3</p>
-                                        </div>
-                                    </button>
-                                </li>
-                                <li class="kategori-list" style="width: 10rem;">
-                                    <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('all')">
-                                        <img loading="lazy" src="assets/images/s8.jpg" class="card-img-top mt-3" alt="all produk">
-                                        <div class="card-body">
-                                            <p class="card-text">All Produk</p>
-                                        </div>
-                                    </button>
-                                </li>
-                                <li class="kategori-list" style="width: 10rem;">
-                                    <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('kategori-1')">
-                                        <img loading="lazy" src="assets/images/s1.jpg" class="card-img-top mt-3" alt="kategori 1">
-                                        <div class="card-body">
-                                            <p class="card-text">Kategori 1</p>
-                                        </div>
-                                    </button>
-                                </li>
+                                @endforeach
+
                             </ul>
                         </div>
                         <!-- /kategori list -->
@@ -282,236 +206,19 @@
                     <div class="row mx-auto product-list">
                         <div class="col">
                             <ul class="card-wrapper d-flex justify-content-around">
-                                <li class="card filterDiv kategori-1" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s1.jpg" class="card-img-top" alt="kategori 1">
+                                @foreach ($produk as $item)
+                                <li class="card filterDiv {{ $item->kategori->name }}" style="width: 11rem;">
+                                    <img loading="lazy" src="assets/images/{{ $item->img_name }}.jpg" class="card-img-top" alt="kategori 1">
                                     <div class="card-body">
-                                    <p class="card-title">Produk 1</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex mt-3">
+                                    <p class="card-title">{{ $item->name }}</p>
+                                    <p class="card-subtitle">Kategori: {{ $item->kategori->name }}</p>
+                                    <p class="card-subtitle">Harga: <?php echo 'Rp' . number_format($item['harga']); ?></p>
+                                    <a href="/product-detail/{{ $item->name }}" class="btn button-primary d-flex mt-3">
                                         Lihat
                                     </a>
                                     </div>
                                 </li>
-                                <li class="card filterDiv kategori-2" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s2.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 2</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-3" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s3.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 3</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-4" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s4.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 4</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-5" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s5.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 5</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-6" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s6.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 6</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-7" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s7.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 7</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-8" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s8.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 8</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-1" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s1.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 1</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-2" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s2.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 2</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-3" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s3.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 3</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-1" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s1.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 1</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-2" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s2.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 2</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-3" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s3.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 3</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-1" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s1.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 1</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-2" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s2.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 2</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-3" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s3.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 3</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-1" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s1.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 1</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-2" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s2.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 2</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-3" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s3.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 3</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-1" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s1.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 1</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-2" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/s2.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 2</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="card filterDiv kategori-3" style="width: 10rem;">
-                                    <img loading="lazy" src="assets/images/s3.jpg" class="card-img-top" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-title">Produk 4</p>
-                                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                        <a href="/product-detail" class="btn button-primary d-flex mt-3">
-                                        Lihat
-                                        </a>
-                                    </div>
-                                </li>
+                                @endforeach
                             </ul>
                             <nav>
                                 <ul class="pagination justify-content-center mx-auto my-3">
@@ -564,7 +271,7 @@
                                 <div class="card mb-3 border-0">
                                     <div class="row row-cols-1 row-cols-md-2 g-0">
                                     <div class="col-md-4">
-                                        <img loading="lazy" src="assets/images/b1.jpg" class="rounded img-fluid m-3" alt="berita & pengumuman">
+                                        <img loading="lazy" src="/assets/images/b1.jpg" class="rounded img-fluid m-3" alt="berita & pengumuman">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body ms-3">
@@ -583,7 +290,7 @@
                                 <div class="card mb-3 border-0">
                                     <div class="row row-cols-1 row-cols-md-2 g-0">
                                     <div class="col-md-4">
-                                        <img loading="lazy" src="assets/images/b2.jpg" class="rounded img-fluid m-3" alt="berita & pengumuman">
+                                        <img loading="lazy" src="/assets/images/b2.jpg" class="rounded img-fluid m-3" alt="berita & pengumuman">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body ms-3">
@@ -602,7 +309,7 @@
                                 <div class="card mb-3 border-0">
                                     <div class="row row-cols-1 row-cols-md-2 g-0">
                                     <div class="col-md-4">
-                                        <img loading="lazy" src="assets/images/b3.jpg" class="rounded img-fluid m-3" alt="berita & pengumuman">
+                                        <img loading="lazy" src="/assets/images/b3.jpg" class="rounded img-fluid m-3" alt="berita & pengumuman">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body ms-3">
@@ -621,7 +328,7 @@
                                 <div class="card mb-3 border-0">
                                     <div class="row row-cols-1 row-cols-md-2 g-0">
                                     <div class="col-md-4">
-                                        <img loading="lazy" src="assets/images/b4.jpg" class="rounded img-fluid m-3" alt="berita & pengumuman">
+                                        <img loading="lazy" src="/assets/images/b4.jpg" class="rounded img-fluid m-3" alt="berita & pengumuman">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body ms-3">
@@ -640,7 +347,7 @@
                                 <div class="card mb-3 border-0">
                                     <div class="row row-cols-1 row-cols-md-2 g-0">
                                     <div class="col-md-4">
-                                        <img loading="lazy" src="assets/images/b1.jpg" class="rounded img-fluid m-3" alt="berita & pengumuman">
+                                        <img loading="lazy" src="/assets/images/b1.jpg" class="rounded img-fluid m-3" alt="berita & pengumuman">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body ms-3">
@@ -659,7 +366,7 @@
                                 <div class="card mb-3 border-0">
                                     <div class="row row-cols-1 row-cols-md-2 g-0">
                                     <div class="col-md-4">
-                                        <img loading="lazy" src="assets/images/b2.jpg" class="rounded img-fluid m-3" alt="berita & pengumuman">
+                                        <img loading="lazy" src="/assets/images/b2.jpg" class="rounded img-fluid m-3" alt="berita & pengumuman">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body ms-3">
@@ -678,7 +385,7 @@
                                 <div class="card mb-3 border-0">
                                     <div class="row row-cols-1 row-cols-md-2 g-0">
                                     <div class="col-md-4">
-                                        <img loading="lazy" src="assets/images/b3.jpg" class="rounded img-fluid m-3" alt="berita & pengumuman">
+                                        <img loading="lazy" src="/assets/images/b3.jpg" class="rounded img-fluid m-3" alt="berita & pengumuman">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body ms-3">
@@ -697,7 +404,7 @@
                                 <div class="card mb-3 border-0">
                                     <div class="row row-cols-1 row-cols-md-2 g-0">
                                     <div class="col-md-4">
-                                        <img loading="lazy" src="assets/images/b4.jpg" class="rounded img-fluid m-3" alt="berita & pengumuman">
+                                        <img loading="lazy" src="/assets/images/b4.jpg" class="rounded img-fluid m-3" alt="berita & pengumuman">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body ms-3">
@@ -751,7 +458,7 @@
                     <ul class="row mx-auto row-cols-1 row-cols-md-3 justify-content-center info-list w31-news">
                         <li class="col content">
                             <div class="grids5-info shadow rounded">
-                                <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="assets/images/blog1.jpg"
+                                <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="/assets/images/blog1.jpg"
                                         alt="" class="img-fluid news-image" />
                                 </a>
                                 <div class="blog-info card-body blog-details">
@@ -772,7 +479,7 @@
                         </li>
                         <li class="col content">
                             <div class="grids5-info shadow rounded">
-                                <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="assets/images/blog2.jpg"
+                                <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="/assets/images/blog2.jpg"
                                         alt="" class="img-fluid news-image" />
                                 </a>
                                 <div class="blog-info card-body blog-details">
@@ -793,7 +500,7 @@
                         </li>
                         <li class="col content">
                             <div class="grids5-info shadow rounded">
-                                <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="assets/images/blog3.jpg"
+                                <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="/assets/images/blog3.jpg"
                                         alt="" class="img-fluid news-image" />
                                 </a>
                                 <div class="blog-info card-body blog-details">
@@ -814,7 +521,7 @@
                         </li>
                         <li class="col content">
                             <div class="grids5-info shadow rounded">
-                                <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="assets/images/blog1.jpg"
+                                <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="/assets/images/blog1.jpg"
                                         alt="" class="img-fluid news-image" />
                                 </a>
                                 <div class="blog-info card-body blog-details">
@@ -835,7 +542,7 @@
                         </li>
                         <li class="col content">
                             <div class="grids5-info shadow rounded">
-                                <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="assets/images/blog2.jpg"
+                                <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="/assets/images/blog2.jpg"
                                         alt="" class="img-fluid news-image" />
                                 </a>
                                 <div class="blog-info card-body blog-details">
@@ -856,7 +563,7 @@
                         </li>
                         <li class="col content">
                             <div class="grids5-info shadow rounded">
-                                <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="assets/images/blog3.jpg"
+                                <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="/assets/images/blog3.jpg"
                                         alt="" class="img-fluid news-image" />
                                 </a>
                                 <div class="blog-info card-body blog-details">
@@ -877,7 +584,7 @@
                         </li>
                         <li class="col content">
                             <div class="grids5-info shadow rounded">
-                                <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="assets/images/blog1.jpg"
+                                <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="/assets/images/blog1.jpg"
                                         alt="" class="img-fluid news-image" />
                                 </a>
                                 <div class="blog-info card-body blog-details">
@@ -898,7 +605,7 @@
                         </li>
                         <li class="col content">
                             <div class="grids5-info shadow rounded">
-                                <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="assets/images/blog2.jpg"
+                                <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="/assets/images/blog2.jpg"
                                         alt="" class="img-fluid news-image" />
                                 </a>
                                 <div class="blog-info card-body blog-details">

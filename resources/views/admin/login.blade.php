@@ -12,7 +12,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-8 align-items-center d-flex bg-light rounded shadow">
-                    <img src="assets/images/logo1.png" class="img-fluid logo" alt="">
+                    <img src="/assets/images/logo1.png" class="img-fluid logo" alt="">
                 </div>
                 <div class="col-12 col-md-4">
                     <form action="/admin" method="post">

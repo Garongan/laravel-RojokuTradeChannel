@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>ROJOKU CHANNEL - {{ $title }}</title>
         <!-- Template CSS Style link -->
-        <link rel="stylesheet" href="assets/css/style-starter.css">
+        <link rel="stylesheet" href="/assets/css/style-starter.css">
     </head>
 <body>
 
@@ -14,13 +14,17 @@
     <header id="site-header" class="fixed-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="index.html">
-                    <img class="img-fluid logo" src="assets/images/logo.png" alt="logo">
+                <a class="navbar-brand" href="/">
+                    <img class="img-fluid logo" src="/assets/images/logo.png" alt="logo">
                 </a>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                    <span class="navbar-toggler-icon icon-expand bg-primary text-white pt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4 18q-.425 0-.713-.288T3 17q0-.425.288-.713T4 16h16q.425 0 .713.288T21 17q0 .425-.288.713T20 18H4Zm0-5q-.425 0-.713-.288T3 12q0-.425.288-.713T4 11h16q.425 0 .713.288T21 12q0 .425-.288.713T20 13H4Zm0-5q-.425 0-.713-.288T3 7q0-.425.288-.713T4 6h16q.425 0 .713.288T21 7q0 .425-.288.713T20 8H4Z"/></svg>
+                    </span>
+                    <span class="navbar-toggler-icon icon-close bg-primary text-white pt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29l-4.3 4.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l4.29-4.3l4.29 4.3a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.42Z"/></svg>
+                    </span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
                     <ul class="navbar-nav my-3 my-lg-0 navbar-nav-scroll">
@@ -33,7 +37,7 @@
                         </li>
                         <span class="pembatas-navbar">|</span>
                         <li class="nav-item">
-                            <a class="nav-link {{ ($title === "Produk") ? 'active' : "" }}" href="/product">Produk</a>
+                            <a class="nav-link {{ ($title === "Produk") ? 'active' : "" }}" href="/produk">Produk</a>
                         </li>
                         <span class="pembatas-navbar">|</span>
                         <li class="nav-item">
@@ -94,30 +98,30 @@
                     <h2>AIRA<span><br>Brand Affiliation<br>and Support</span></h2>
                     <div class="row mt-3 brand-logo">
                         <div class="col">
-                            <img src="assets/images/logo-mandiri.png" alt="logo-mandiri">
+                            <img src="/assets/images/logo-mandiri.png" alt="logo-mandiri">
                         </div>
                         <div class="col">
-                            <img src="assets/images/logo-agincourt.png" alt="logo=agincourt">
+                            <img src="/assets/images/logo-agincourt.png" alt="logo=agincourt">
                         </div>
                         <div class="col">
-                            <img src="assets/images/logo-ballooney.png" alt="logo-ballooney">
+                            <img src="/assets/images/logo-ballooney.png" alt="logo-ballooney">
                         </div>
                         <div class="col">
-                            <img src="assets/images/logo-jasatirta.png" alt="logo-jasatirta">
+                            <img src="/assets/images/logo-jasatirta.png" alt="logo-jasatirta">
                         </div>
                     </div>
                     <div class="row brand-logo mt-3">
                         <div class="col">
-                            <img src="assets/images/logo-mandiri.png" alt="logo-mandiri">
+                            <img src="/assets/images/logo-mandiri.png" alt="logo-mandiri">
                         </div>
                         <div class="col">
-                            <img src="assets/images/logo-agincourt.png" alt="logo=agincourt">
+                            <img src="/assets/images/logo-agincourt.png" alt="logo=agincourt">
                         </div>
                         <div class="col">
-                            <img src="assets/images/logo-ballooney.png" alt="logo-ballooney">
+                            <img src="/assets/images/logo-ballooney.png" alt="logo-ballooney">
                         </div>
                         <div class="col">
-                            <img class="img-fluid" src="assets/images/logo-jasatirta.png" alt="logo-jasatirta">
+                            <img class="img-fluid" src="/assets/images/logo-jasatirta.png" alt="logo-jasatirta">
                         </div>
                     </div>
                 </div>
@@ -158,12 +162,12 @@
     <!-- //move top -->
 
     <!-- common jquery plugin -->
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="/assets/js/jquery-3.3.1.min.js"></script>
     <!-- //common jquery plugin -->
 
     <!-- banner slick slider -->
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="/assets/js/slick.js"></script>
+    <script src="/assets/js/script.js"></script>
     <!-- //banner slick slider -->
 
     <!-- MENU-JS -->
@@ -173,10 +177,10 @@
 
             if (scroll >= 80) {
                 $("#site-header").addClass("nav-fixed");
-                $(".logo").attr("src", "assets/images/logo1.png");
+                $(".logo").attr("src", "/assets/images/logo1.png");
             } else {
                 $("#site-header").removeClass("nav-fixed");
-                $(".logo").attr("src", "assets/images/logo.png");
+                $(".logo").attr("src", "/assets/images/logo.png");
             }
         });
 
@@ -194,7 +198,7 @@
     <!-- //disable body scroll which navbar is in active -->
     
     <!-- bootstrap -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
     <!-- //bootstrap -->
 
     <!-- script slider kategori -->
@@ -232,10 +236,10 @@
         };
     </script>
     <!-- productt script -->
-    <script async src="assets/js/product.js"></script>
+    <script async src="/assets/js/product.js"></script>
     <!-- /product script -->
     <!-- bisnis class pagination -->
-    <script async src="assets/js/bisnis-class-pagination.js"></script>
+    <script async src="/assets/js/bisnis-class-pagination.js"></script>
     <!-- /bisnis class pagination -->
 
     <!-- //Js scripts -->

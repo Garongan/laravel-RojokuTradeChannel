@@ -32,94 +32,16 @@
                                     </div>
                                 </button>
                             </li>
+                            @foreach ($kategori as $item)
                             <li class="kategori-list" style="width: 10rem;">
-                                <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('kategori-1')">
-                                    <img loading="lazy" src="assets/images/s1.jpg" class="card-img-top mt-3" alt="kategori 1">
+                                <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('{{ $item->name }}')">
+                                    <img loading="lazy" src="assets/images/s{{ $item->id }}.jpg" class="card-img-top mt-3" alt="{{ $item->name }}">
                                     <div class="card-body">
-                                        <p class="card-text">Kategori 1</p>
+                                        <p class="card-text">{{ $item->name }}</p>
                                     </div>
                                 </button>
                             </li>
-                            <li class="kategori-list" style="width: 10rem;">
-                                <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('kategori-2')">
-                                    <img loading="lazy" src="assets/images/s2.jpg" class="card-img-top mt-3" alt="kategori 2">
-                                    <div class="card-body">
-                                        <p class="card-text">Kategori 2</p>
-                                    </div>
-                                </button>
-                            </li>
-                            <li class="kategori-list" style="width: 10rem;">
-                                <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('kategori-3')">
-                                    <img loading="lazy" src="assets/images/s3.jpg" class="card-img-top mt-3" alt="kategori 3">
-                                    <div class="card-body">
-                                        <p class="card-text">Kategori 3</p>
-                                    </div>
-                                </button>
-                            </li>
-                            <li class="kategori-list" style="width: 10rem;">
-                                <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('all')">
-                                    <img loading="lazy" src="assets/images/s8.jpg" class="card-img-top mt-3" alt="all produk">
-                                    <div class="card-body">
-                                        <p class="card-text">All Produk</p>
-                                    </div>
-                                </button>
-                            </li>
-                            <li class="kategori-list" style="width: 10rem;">
-                                <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('kategori-1')">
-                                    <img loading="lazy" src="assets/images/s1.jpg" class="card-img-top mt-3" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-text">Kategori 1</p>
-                                    </div>
-                                </button>
-                            </li>
-                            <li class="kategori-list" style="width: 10rem;">
-                                <button type="button" class="active border-0 scrollToProduk" onclick="filterSelection('all')">
-                                    <img loading="lazy" src="assets/images/s8.jpg" class="card-img-top mt-3" alt="all produk">
-                                    <div class="card-body">
-                                        <p class="card-text">All Produk</p>
-                                    </div>
-                                </button>
-                            </li>
-                            <li class="kategori-list" style="width: 10rem;">
-                                <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('kategori-1')">
-                                    <img loading="lazy" src="assets/images/s1.jpg" class="card-img-top mt-3" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-text">Kategori 1</p>
-                                    </div>
-                                </button>
-                            </li>
-                            <li class="kategori-list" style="width: 10rem;">
-                                <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('kategori-2')">
-                                    <img loading="lazy" src="assets/images/s2.jpg" class="card-img-top mt-3" alt="kategori 2">
-                                    <div class="card-body">
-                                        <p class="card-text">Kategori 2</p>
-                                    </div>
-                                </button>
-                            </li>
-                            <li class="kategori-list" style="width: 10rem;">
-                                <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('kategori-3')">
-                                    <img loading="lazy" src="assets/images/s3.jpg" class="card-img-top mt-3" alt="kategori 3">
-                                    <div class="card-body">
-                                        <p class="card-text">Kategori 3</p>
-                                    </div>
-                                </button>
-                            </li>
-                            <li class="kategori-list" style="width: 10rem;">
-                                <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('all')">
-                                    <img loading="lazy" src="assets/images/s8.jpg" class="card-img-top mt-3" alt="all produk">
-                                    <div class="card-body">
-                                        <p class="card-text">All Produk</p>
-                                    </div>
-                                </button>
-                            </li>
-                            <li class="kategori-list" style="width: 10rem;">
-                                <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('kategori-1')">
-                                    <img loading="lazy" src="assets/images/s1.jpg" class="card-img-top mt-3" alt="kategori 1">
-                                    <div class="card-body">
-                                        <p class="card-text">Kategori 1</p>
-                                    </div>
-                                </button>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                     <!-- /kategori list -->
@@ -172,236 +94,19 @@
                     <!-- produck -->
                     <div class="container">
                         <ul class="tab-content row mt-5 justify-content-start">
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-1">
-                                <img loading="lazy" src="assets/images/s1.jpg" class="card-img-top" alt="kategori 1">
+                            @foreach ($produk as $item)
+                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 {{ $item->kategori->name }}">
+                                <img loading="lazy" src="assets/images/{{ $item->img_name }}.jpg" class="card-img-top" alt="kategori 1">
                                 <div class="card-body">
-                                <p class="card-title">Produk 1</p>
-                                <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                <a href="/product-detail" class="btn button-primary d-flex">
+                                <p>{{ $item->name }}</p>
+                                <p>Kategori: {{ $item->kategori->name }}</p>
+                                <p>Harga: <?php echo 'Rp' . number_format($item['harga']); ?></p>
+                                <a href="/product-detail/{{ $item->name }}" class="btn button-primary d-flex mt-3">
                                     Lihat
                                 </a>
                                 </div>
                             </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-2">
-                                <img loading="lazy" src="assets/images/s2.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 2</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-3">
-                                <img loading="lazy" src="assets/images/s3.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 3</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-4">
-                                <img loading="lazy" src="assets/images/s4.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 4</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-5">
-                                <img loading="lazy" src="assets/images/s5.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 5</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-6">
-                                <img loading="lazy" src="assets/images/s6.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 6</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-7">
-                                <img loading="lazy" src="assets/images/s7.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 7</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-8">
-                                <img loading="lazy" src="assets/images/s8.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 8</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-1">
-                                <img loading="lazy" src="assets/images/s1.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 1</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-2">
-                                <img loading="lazy" src="assets/images/s2.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 2</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-3">
-                                <img loading="lazy" src="assets/images/s3.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 3</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-1">
-                                <img loading="lazy" src="assets/images/s1.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 1</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-2">
-                                <img loading="lazy" src="assets/images/s2.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 2</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-3">
-                                <img loading="lazy" src="assets/images/s3.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 3</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-1">
-                                <img loading="lazy" src="assets/images/s1.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 1</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-2">
-                                <img loading="lazy" src="assets/images/s2.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 2</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-3">
-                                <img loading="lazy" src="assets/images/s3.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 3</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-1">
-                                <img loading="lazy" src="assets/images/s1.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 1</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-2">
-                                <img loading="lazy" src="assets/images/s2.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 2</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-3">
-                                <img loading="lazy" src="assets/images/s3.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 3</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-1">
-                                <img loading="lazy" src="assets/images/s1.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 1</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-2">
-                                <img loading="lazy" src="assets/images/s2.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 2</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 kategori-3">
-                                <img loading="lazy" src="assets/images/s3.jpg" class="card-img-top" alt="kategori 1">
-                                <div class="card-body">
-                                    <p class="card-title">Produk 4</p>
-                                    <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                                    <a href="/product-detail" class="btn button-primary d-flex">
-                                    Lihat
-                                    </a>
-                                </div>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                     <!-- /procuk -->

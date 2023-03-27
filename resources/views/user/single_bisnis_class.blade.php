@@ -12,8 +12,11 @@
 
                 <!-- bisnis kelas Detail Start -->
                 <div class="mb-5">
-                    <h1 class="text-uppercase mb-4">Diam dolor duo ipsum clita sed lorem tempor. Clita kasd diam justo diam
-                        lorem sed amet sed rebum eos.</h1>
+                    <img class="img-fluid w-100 rounded mb-5" src="/assets/images/blog1.jpg" alt="">
+                    <h1 class="text-uppercase mb-4">
+                        Diam dolor duo ipsum clita sed lorem tempor. Clita kasd diam justo diam
+                        lorem sed amet sed rebum eos.
+                    </h1>
                     <p>Sadipscing labore amet rebum est et justo gubergren. Et eirmod ipsum sit diam ut
                         magna lorem. Nonumy vero labore lorem sanctus rebum et lorem magna kasd, stet
                         amet magna accusam consetetur eirmod. Kasd accusam sit ipsum sadipscing et at at
