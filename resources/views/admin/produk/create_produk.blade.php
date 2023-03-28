@@ -9,11 +9,6 @@
                   <div class="row">
                     <div class="col-12">
                       <h2 class="tm-block-title d-inline-block">Create Product</h2>
-                      @if (session()->has('success'))
-                          <div class="alert alert-success" role="alert">
-                            {{ session('success') }}
-                          </div>
-                      @endif
                     </div>
                   </div>
                   <div class="row tm-edit-product-row">
@@ -33,11 +28,11 @@
                         </div>
                         <div class="form-group mb-3">
                           <label for="brand">Product Brand</label>
-                          <input class="form-control" type="text" name="brand" id="brand" placeholder="Ketika Brand Produk..." rows="10" required value="{{ old('brand') }}" />
+                          <input class="form-control" type="text" name="brand" id="brand" placeholder="Ketika Brand Produk..." required value="{{ old('brand') }}" />
                         </div>
                         <div class="form-group mb-3">
                           <label for="brand">Harga</label>
-                          <input class="form-control" type="text" name="harga" id="harga" placeholder="Ketika Harga Produk..." rows="10" required value="{{ old('harga') }}" />
+                          <input class="form-control" type="text" name="harga" id="harga" placeholder="Ketika Harga Produk..." required value="{{ old('harga') }}" />
                         </div>
                         <div class="form-group mb-3">
                           <label for="kategori" >Category</label>
@@ -59,60 +54,66 @@
                           <label for="spec">Specification</label>
                           <textarea class="form-control" name="spec" id="spec" placeholder="Ketika Spesifikasi Produk..." rows="5" value="{{ old('spec') }}" required></textarea>
                         </div>
-                    </div>
-
-                    {{-- img name --}}
-                    <div class="col-xl-6 col-lg-6 col-md-12 mt-4">
-                      <div class="mx-auto">
-                        <div class="row gap-3">
-
-                          {{-- img 1 --}}
-                          <div class="tm-product-img-dummy col-12" style="height: 240px">
-                            <i class="tm-upload-icon" onclick="document.getElementById('fileInput1').click();">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M11 20H6.5q-2.275 0-3.888-1.575T1 14.575q0-1.95 1.175-3.475T5.25 9.15q.625-2.3 2.5-3.725T12 4q2.925 0 4.963 2.038T19 11q1.725.2 2.863 1.488T23 15.5q0 1.875-1.313 3.188T18.5 20H13v-7.15l1.6 1.55L16 13l-4-4l-4 4l1.4 1.4l1.6-1.55V20Z"/></svg>
-                            </i>
-                          </div>
-                          {{-- /img 1 --}}
-
-                          {{-- img 2 --}}
-                          <div class="tm-product-img-dummy col" style="height: 80px">
-                            <i class="tm-upload-icon" onclick="document.getElementById('fileInput2').click();">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M11 20H6.5q-2.275 0-3.888-1.575T1 14.575q0-1.95 1.175-3.475T5.25 9.15q.625-2.3 2.5-3.725T12 4q2.925 0 4.963 2.038T19 11q1.725.2 2.863 1.488T23 15.5q0 1.875-1.313 3.188T18.5 20H13v-7.15l1.6 1.55L16 13l-4-4l-4 4l1.4 1.4l1.6-1.55V20Z"/></svg>
-                            </i>
-                          </div>
-                          {{-- /img 2 --}}
-
-                          {{-- img 3 --}}
-                          <div class="tm-product-img-dummy col">
-                            <i class="tm-upload-icon" onclick="document.getElementById('fileInput3').click();">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M11 20H6.5q-2.275 0-3.888-1.575T1 14.575q0-1.95 1.175-3.475T5.25 9.15q.625-2.3 2.5-3.725T12 4q2.925 0 4.963 2.038T19 11q1.725.2 2.863 1.488T23 15.5q0 1.875-1.313 3.188T18.5 20H13v-7.15l1.6 1.55L16 13l-4-4l-4 4l1.4 1.4l1.6-1.55V20Z"/></svg>
-                            </i>
-                          </div>
-                          {{-- /img 3 --}}
-                          
-                          {{-- img 4 --}}
-                          <div class="tm-product-img-dummy col">
-                            <i class="tm-upload-icon" onclick="document.getElementById('fileInput4').click();">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M11 20H6.5q-2.275 0-3.888-1.575T1 14.575q0-1.95 1.175-3.475T5.25 9.15q.625-2.3 2.5-3.725T12 4q2.925 0 4.963 2.038T19 11q1.725.2 2.863 1.488T23 15.5q0 1.875-1.313 3.188T18.5 20H13v-7.15l1.6 1.55L16 13l-4-4l-4 4l1.4 1.4l1.6-1.55V20Z"/></svg>
-                            </i>
-                          </div>
-                          {{-- /img 4 --}}
-
                         </div>
-                      </div>
-                      <div class="custom-file mt-3 mb-3">
-                        <input id="fileInput1" type="file" accept=".jpg" style="display:none;" />
-                        <input id="fileInput2" type="file" accept=".jpg" style="display:none;" />
-                        <input id="fileInput3" type="file" accept=".jpg" style="display:none;" />
-                        <input id="fileInput4" type="file" accept=".jpg" style="display:none;" />
-                      </div>
-                    </div>
-                    {{-- /img name --}}
 
-                    <div class="col-12 mt-3">
-                      <button type="submit" class="btn btn-primary btn-block text-uppercase">Create Product</button>
-                    </div>
-                  </form>
+                        {{-- img name --}}
+                        <div class="col-md-6 col-12 mt-3">
+                          <div class="mx-auto">
+                            <div class="row row-gap-3">
+
+                              {{-- img 1 --}}
+                              <div class="col-12">
+                                <div class="tm-product-img-dummy mb-3">
+                                  <div class="tm-upload-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><g fill="none"><path fill="currentColor" d="M44 24a2 2 0 1 0-4 0h4ZM24 8a2 2 0 1 0 0-4v4Zm15 32H9v4h30v-4ZM8 39V9H4v30h4Zm32-15v15h4V24h-4ZM9 8h15V4H9v4Zm0 32a1 1 0 0 1-1-1H4a5 5 0 0 0 5 5v-4Zm30 4a5 5 0 0 0 5-5h-4a1 1 0 0 1-1 1v4ZM8 9a1 1 0 0 1 1-1V4a5 5 0 0 0-5 5h4Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m6 35l10.693-9.802a2 2 0 0 1 2.653-.044L32 36m-4-5l4.773-4.773a2 2 0 0 1 2.615-.186L42 31m-5-13V6m-5 5l5-5l5 5"/></g></svg>
+                                  </div>
+                                </div>
+                                <input id="fileInput1" class="form-control" type="file" accept=".jpg" />
+                              </div>
+                              {{-- /img 1 --}}
+
+                              {{-- img 2 --}}
+                              <div class="col-12 col-md-4">
+                                <div class="tm-product-img-dummy mb-3">
+                                  <div class="tm-upload-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><g fill="none"><path fill="currentColor" d="M44 24a2 2 0 1 0-4 0h4ZM24 8a2 2 0 1 0 0-4v4Zm15 32H9v4h30v-4ZM8 39V9H4v30h4Zm32-15v15h4V24h-4ZM9 8h15V4H9v4Zm0 32a1 1 0 0 1-1-1H4a5 5 0 0 0 5 5v-4Zm30 4a5 5 0 0 0 5-5h-4a1 1 0 0 1-1 1v4ZM8 9a1 1 0 0 1 1-1V4a5 5 0 0 0-5 5h4Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m6 35l10.693-9.802a2 2 0 0 1 2.653-.044L32 36m-4-5l4.773-4.773a2 2 0 0 1 2.615-.186L42 31m-5-13V6m-5 5l5-5l5 5"/></g></svg>
+                                  </div>
+                                </div>
+                                <input id="fileInput2" class="form-control" type="file" accept=".jpg" />
+                              </div>
+                              {{-- /img 2 --}}
+
+                              {{-- img 3 --}}
+                              <div class="col-12 col-md-4">
+                                <div class="tm-product-img-dummy mb-3">
+                                  <div class="tm-upload-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><g fill="none"><path fill="currentColor" d="M44 24a2 2 0 1 0-4 0h4ZM24 8a2 2 0 1 0 0-4v4Zm15 32H9v4h30v-4ZM8 39V9H4v30h4Zm32-15v15h4V24h-4ZM9 8h15V4H9v4Zm0 32a1 1 0 0 1-1-1H4a5 5 0 0 0 5 5v-4Zm30 4a5 5 0 0 0 5-5h-4a1 1 0 0 1-1 1v4ZM8 9a1 1 0 0 1 1-1V4a5 5 0 0 0-5 5h4Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m6 35l10.693-9.802a2 2 0 0 1 2.653-.044L32 36m-4-5l4.773-4.773a2 2 0 0 1 2.615-.186L42 31m-5-13V6m-5 5l5-5l5 5"/></g></svg>
+                                  </div>
+                                </div>
+                                <input id="fileInput3" class="form-control" type="file" accept=".jpg" />
+                              </div>
+                              {{-- /img 3 --}}
+                              
+                              {{-- img 4 --}}
+                              <div class="col-12 col-md-4">
+                                <div class="tm-product-img-dummy mb-3">
+                                  <div class="tm-upload-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><g fill="none"><path fill="currentColor" d="M44 24a2 2 0 1 0-4 0h4ZM24 8a2 2 0 1 0 0-4v4Zm15 32H9v4h30v-4ZM8 39V9H4v30h4Zm32-15v15h4V24h-4ZM9 8h15V4H9v4Zm0 32a1 1 0 0 1-1-1H4a5 5 0 0 0 5 5v-4Zm30 4a5 5 0 0 0 5-5h-4a1 1 0 0 1-1 1v4ZM8 9a1 1 0 0 1 1-1V4a5 5 0 0 0-5 5h4Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m6 35l10.693-9.802a2 2 0 0 1 2.653-.044L32 36m-4-5l4.773-4.773a2 2 0 0 1 2.615-.186L42 31m-5-13V6m-5 5l5-5l5 5"/></g></svg>
+                                  </div>
+                                </div>
+                                <input id="fileInput4" class="form-control" type="file" accept=".jpg" />
+                              </div>
+                              {{-- /img 4 --}}
+
+                            </div>
+                          </div>
+                        </div>
+                        {{-- /img name --}}
+
+                        <div class="col-12 mt-3">
+                          <button type="submit" class="btn btn-primary btn-block text-uppercase">Create Product</button>
+                        </div>
+                      </form>
                   </div>
                 </div>
               </div>

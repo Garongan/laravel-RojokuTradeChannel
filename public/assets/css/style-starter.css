@@ -3141,7 +3141,7 @@ textarea.form-control.is-invalid {
 }
 
 .btn:hover {
-  color: var(--secondary-color);
+  color: var(--secondary-color) !important;
 }
 
 .btn-check:focus+.btn,
@@ -17530,7 +17530,6 @@ h4.inner-text-title {
 
 /* style add product */
 
-
 .tm-block-h-auto {
   min-height: 1px;
   max-height: none;
@@ -17551,6 +17550,7 @@ h4.inner-text-title {
 
 .tm-product-img-dummy {
   max-width: 100%;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17569,6 +17569,7 @@ h4.inner-text-title {
 }
 
 .tm-upload-icon {
+  position: absolute;
   background: #fcd1c7;
   width: fit-content;
   padding: 5px;

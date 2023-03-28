@@ -96,7 +96,7 @@
                         <ul class="tab-content row mt-5 justify-content-start">
                             @foreach ($produk as $item)
                             <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 {{ $item->kategori->name }}">
-                                <img loading="lazy" src="assets/images/{{ $item->img_name }}.jpg" class="card-img-top" alt="kategori 1">
+                                <img loading="lazy" src="assets/images/{{ $item->img_name1 }}.jpg" class="card-img-top" alt="kategori 1">
                                 <div class="card-body">
                                 <p>{{ $item->name }}</p>
                                 <p>Kategori: {{ $item->kategori->name }}</p>

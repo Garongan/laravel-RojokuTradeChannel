@@ -68,11 +68,12 @@ class AdminProdukController extends Controller
         //     $path = $request->fileInput1->storeAs('images', $id.'-1.jpg', 's3');
         //     $validatedData['img_name'] = $path;
         // }
-        $validatedData['img_name'] = 's1';
+        $validatedData['img_name1'] = 's1';
+        $validatedData['img_name2'] = 's2';
+        $validatedData['img_name3'] = 's3';
+        $validatedData['img_name4'] = 's4';
         
         Produk::create($validatedData);
-        // Storage::disk('local')->put($path, 'images');
-
         return redirect('/admin/produk')->with('success', 'New product has been created!');
     }
 
@@ -94,11 +95,16 @@ class AdminProdukController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Produk  $produk
-     * @return \Illuminate\Http\Response
      */
     public function edit(Produk $produk)
     {
         //
+        return view('/admin/produk/update_produk',
+        [
+            "title" => "Update Produk",
+            "produk" => $produk,
+            "kategori" => Kategori::all()
+        ]);
     }
 
     /**
@@ -106,11 +112,37 @@ class AdminProdukController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Produk  $produk
-     * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Produk $produk)
     {
         //
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'brand' => 'required|max:100',
+            'harga' => 'required|max:255',
+            'kategori_id' => 'required',
+            'desc' => 'required',
+            'spec' => 'required'
+        ]);
+
+        
+        // $id = uniqid("ROJ-");
+        // $validatedData['id'] = $id;
+        // $extension = $request->fileInput1->extension();
+        // if ($request->file('fileInput1')->isValid() && ($extension === '.jpg')) {
+        //     // ...
+        //     $path = $request->fileInput1->storeAs('images', $id.'-1.jpg', 's3');
+        //     $validatedData['img_name'] = $path;
+        // }
+        $validatedData['img_name1'] = 's1';
+        $validatedData['img_name2'] = 's2';
+        $validatedData['img_name3'] = 's3';
+        $validatedData['img_name4'] = 's4';
+        
+        Produk::where('id', $produk->id)
+                ->update($validatedData);
+
+        return redirect('/admin/produk')->with('success', "$produk->name has been updated!");
     }
 
     /**
@@ -122,5 +154,7 @@ class AdminProdukController extends Controller
     public function destroy(Produk $produk)
     {
         //
+        Produk::destroy($produk->id);
+        return redirect('/admin/produk')->with('success', "Product $produk->name has been deleted!");
     }
 }
