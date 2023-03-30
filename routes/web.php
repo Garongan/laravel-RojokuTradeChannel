@@ -28,8 +28,8 @@ Route::get('/', function (Produk $produk, Kategori $kategori) {
         'user/home',
         [
             "title" => "Home",
-            "produk" => $produk::all(),
-            "kategori" => $kategori::all()
+            "produk" => Produk::latest()->limit(8)->get(),
+            "kategori" => Kategori::all()
         ]
     );
 });

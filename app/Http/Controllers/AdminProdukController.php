@@ -17,13 +17,19 @@ class AdminProdukController extends Controller
     public function index()
     {
         //
+        if (request('kategori') == 0) {
+            # code...
+            $produk = Produk::latest()->filter(request(['search-produk']))->paginate(8);
+        } else {
+            $produk = Produk::latest()->filter(request(['search-produk', 'kategori']))->paginate(8);
+        }
         return view('/admin/produk/index', 
         [
             "title" => "Produk",
-            "produk" => Produk::all(),
+            "produk" => $produk,
             "kategori" => Kategori::all()
         ]
-    );
+        );
 
     }
 

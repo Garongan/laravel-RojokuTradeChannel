@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('admin')
         ]);
 
-        Produk::factory(8)->create();
+        Produk::factory(16)->create();
 
         Kategori::create([
             'name' => 'Elektronik Stuff',

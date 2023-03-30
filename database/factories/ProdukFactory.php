@@ -21,7 +21,7 @@ class ProdukFactory extends Factory
             //
                 'name' => fake()->word(),
                 'brand' => fake()->sentence(3),
-                'harga' => '150000',
+                'harga' => fake()->numberBetween(50000, 1000000),
                 'kategori_id' => fake()->numberBetween(1, 3),
                 'img_name1' => 'produk-images/s'.fake()->numberBetween(1, 8).'.jpg',
                 'img_name2' => 'produk-images/s'.fake()->numberBetween(1, 8).'.jpg',

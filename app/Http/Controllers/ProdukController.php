@@ -16,13 +16,22 @@ class ProdukController extends Controller
     public function index()
     {
         //
-        return view(
-            'user/produk/product',
-            [
-                "title" => "Produk",
-                "produk" => Produk::all(),
-                "kategori" => Kategori::all()
-            ]
+        if (request('kategori') != 0) {
+            # code...
+            $produk = Produk::latest()->filter(request(['search-produk', 'kategori']))->paginate(9);
+        }
+        if (request('orderPrice') == 'lowToHigh') {
+            # code...
+            $produk = $produk = Produk::orderBy('harga', 'asc')->filter(request(['search-produk', 'kategori']))->paginate(9);
+        } else {
+            $produk = Produk::latest()->filter(request(['search-produk', 'kategori']))->paginate(9);
+        }
+        return view('/user/produk/product', 
+        [
+            "title" => "Produk",
+            "produk" => $produk,
+            "kategori" => Kategori::all()
+        ]
         );
     }
 
@@ -33,14 +42,6 @@ class ProdukController extends Controller
     public function create()
     {
         //
-        return view(
-            'admin/create_produk',
-            [
-                "title" => "Create Produk",
-                "produk" => Produk::all(),
-                "kategori" => Kategori::all()
-            ]
-        );
     }
 
     /**

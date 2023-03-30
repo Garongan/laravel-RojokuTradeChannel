@@ -200,7 +200,7 @@
                 <div class="row border border-1 rounded shadow mt-3 list-kategori-produk">
                     <div class="row mx-auto">
                         <div class="col">
-                            <h3 class="title-style text-start mb-lg-5 mb-4">ALL <span>PRODUCT</span></h3>
+                            <h3 class="title-style text-start mb-lg-5 mb-4">NEW <span>PRODUCT</span></h3>
                         </div>
                     </div>
                     <div class="row mx-auto product-list">
@@ -249,6 +249,10 @@
             <!-- /instagram embed -->
         </div>
     </section>
+
+      <!-- productt kategori script -->
+      <script async src="/assets/js/product.js"></script>
+      <!-- /product kategori script -->
 
     <!-- /produk grids -->
 

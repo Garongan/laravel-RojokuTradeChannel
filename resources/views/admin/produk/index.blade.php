@@ -21,21 +21,35 @@
                                 <div class="col-12 col-auto col-lg-8">
                                     <div class="row">
                                         <!-- search -->
-                                        <div class="col col-12 col-md-4">
-                                            <form action="">
-                                                <div class="form-label fs-6">Produk Name</div>
-                                                <input type="search" name="search-produk" class="fs-6 form-control form-control-lg form-control-sm rounded" onkeyup="searchProduct()" class="form-control" id="search-produk" placeholder="Search Produk">
+                                        <div class="col col-12 col-md-6">
+                                            <form action="/admin/produk">
+                                                @csrf
+                                                <label for="search-produk" class="form-label fs-6">Produk Name</label>
+                                                <div class="input-group">
+                                                    <input type="search" id="search-produk" name="search-produk" class="fs-6 form-control" class="form-control" placeholder="Search Produk" value="{{ request('search-produk') }}">
+                                                    <button class="btn btn-primary" type="submit">Search</button>
+                                                </div>
                                             </form>
                                         </div>
                                         {{-- kategori --}}
                                         <div class="col">
                                             <div class="form-label fs-6">Kategori</div>
-                                            <select class="form-control-lg form-select fs-6">
-                                                <option value="0">All Produk</option>
-                                                @foreach ($kategori as $item)
-                                                    <option value="{{ $item->id }}">{{ $item->name }}</option>
-                                                @endforeach
-                                            </select>
+                                            <form action="/admin/produk">
+                                                @csrf
+                                                <div class="input-group">
+                                                    <select name="kategori" class="form-select fs-6">
+                                                        <option value="0">All Produk</option>
+                                                        @foreach ($kategori as $item)
+                                                            @if (request('kategori') == $item->id)
+                                                                <option value="{{ $item->id }}" selected>{{ $item->name }}</option>
+                                                            @else
+                                                                <option value="{{ $item->id }}" }}">{{ $item->name }}</option>
+                                                            @endif
+                                                        @endforeach
+                                                    </select>
+                                                    <input type="submit" class="btn btn-primary" value="Select">
+                                                </div>
+                                            </form>
                                         </div>
                                         {{-- /kateogori --}}
                                     </div>
@@ -75,7 +89,6 @@
                                     </thead>
                                     @foreach ($produk as $item)
                                     <tr>
-
                                         <td>{{ $loop->iteration }}</td>
                                         <!-- img thumbnail -->
                                         <td>
@@ -142,7 +155,9 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            <div id="pagination"></div>
+                            <div class="d-flex justify-content-center">
+                                {{ $produk->links() }}
+                            </div>
                         </div>
                     </div>
                 </div>
