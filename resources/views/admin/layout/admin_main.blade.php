@@ -95,9 +95,21 @@
     </footer>
     <!-- /footer -->
 
+    <!-- common jquery plugin -->
+    <script src="/assets/js/jquery-3.3.1.min.js"></script>
+    <!-- //common jquery plugin -->
+
+    <!-- produck deteil -->
+    <script src="/assets/js/produk-detail.js"></script>
+    <!-- /produk detail -->
+
     <!-- bootstrap -->
     <script src="/assets/js/bootstrap.min.js"></script>
     <!-- //bootstrap -->
+
+    {{-- custom js --}}
+    <script src="/assets/js/custom.js"></script>
+    {{-- /custom js --}}
 
 </body>
 </html>

@@ -50,30 +50,39 @@ class AdminProdukController extends Controller
     public function store(Request $request)
     {
         //
+        
         $validatedData = $request->validate([
-            'name' => 'required|max:255',
+            'name' => 'required|max:64',
             'brand' => 'required|max:100',
-            'harga' => 'required|max:255',
+            'harga' => 'required|max:9',
             'kategori_id' => 'required',
+            'img_name1' => 'image|file|max:1024',
+            'img_name2' => 'image|file|max:1024',
+            'img_name3' => 'image|file|max:1024',
+            'img_name4' => 'image|file|max:1024',
             'desc' => 'required',
             'spec' => 'required'
         ]);
-
         
-        // $id = uniqid("ROJ-");
-        // $validatedData['id'] = $id;
-        // $extension = $request->fileInput1->extension();
-        // if ($request->file('fileInput1')->isValid() && ($extension === '.jpg')) {
-        //     // ...
-        //     $path = $request->fileInput1->storeAs('images', $id.'-1.jpg', 's3');
-        //     $validatedData['img_name'] = $path;
-        // }
-        $validatedData['img_name1'] = 's1';
-        $validatedData['img_name2'] = 's2';
-        $validatedData['img_name3'] = 's3';
-        $validatedData['img_name4'] = 's4';
+        if ($request->hasFile('img_name1')) {
+            # code...
+            $validatedData['img_name1'] = $request->file('img_name1')->store('produk-images');
+        }
+        if ($request->hasFile('img_name2')) {
+            # code...
+            $validatedData['img_name2'] = $request->file('img_name2')->store('produk-images');
+        }
+        if ($request->hasFile('img_name3')) {
+            # code...
+            $validatedData['img_name3'] = $request->file('img_name3')->store('produk-images');
+        }
+        if ($request->hasFile('img_name4')) {
+            # code...
+            $validatedData['img_name4'] = $request->file('img_name4')->store('produk-images');
+        }
         
         Produk::create($validatedData);
+        
         return redirect('/admin/produk')->with('success', 'New product has been created!');
     }
 
@@ -116,28 +125,55 @@ class AdminProdukController extends Controller
     public function update(Request $request, Produk $produk)
     {
         //
-        $validatedData = $request->validate([
-            'name' => 'required|max:255',
+        $rules = [
+            'name' => 'required|max:64',
             'brand' => 'required|max:100',
-            'harga' => 'required|max:255',
+            'harga' => 'required|max:9',
             'kategori_id' => 'required',
+            'img_name1' => 'image|file|max:1024',
+            'img_name2' => 'image|file|max:1024',
+            'img_name3' => 'image|file|max:1024',
+            'img_name4' => 'image|file|max:1024',
             'desc' => 'required',
             'spec' => 'required'
-        ]);
+        ];
+
+        $validatedData = $request->validate($rules);
 
         
-        // $id = uniqid("ROJ-");
-        // $validatedData['id'] = $id;
-        // $extension = $request->fileInput1->extension();
-        // if ($request->file('fileInput1')->isValid() && ($extension === '.jpg')) {
-        //     // ...
-        //     $path = $request->fileInput1->storeAs('images', $id.'-1.jpg', 's3');
-        //     $validatedData['img_name'] = $path;
-        // }
-        $validatedData['img_name1'] = 's1';
-        $validatedData['img_name2'] = 's2';
-        $validatedData['img_name3'] = 's3';
-        $validatedData['img_name4'] = 's4';
+        if ($request->file('img_name1')) {
+            # code...
+            if ($request->oldImage1) {
+                # code...
+                Storage::delete($request->oldImage1);
+            }
+            $validatedData['img_name1'] = $request->file('img_name1')->store('produk-images');
+        }
+        if ($request->hasFile('img_name2')) {
+            # code...
+            if ($request->oldImage2) {
+                # code...
+                Storage::delete($request->oldImage2);
+            }
+            $validatedData['img_name2'] = $request->file('img_name2')->store('produk-images');
+        }
+        if ($request->hasFile('img_name3')) {
+            # code...
+            if ($request->oldImage3) {
+                # code...
+                Storage::delete($request->oldImage3);
+            }
+            $validatedData['img_name3'] = $request->file('img_name3')->store('produk-images');
+        }
+        if ($request->hasFile('img_name4')) {
+            # code...
+            if ($request->oldImage4) {
+                # code...
+                Storage::delete($request->oldImage4);
+            }
+            $validatedData['img_name4'] = $request->file('img_name4')->store('produk-images');
+        }
+
         
         Produk::where('id', $produk->id)
                 ->update($validatedData);
@@ -154,6 +190,22 @@ class AdminProdukController extends Controller
     public function destroy(Produk $produk)
     {
         //
+        if ($produk->img_name1) {
+            # code...
+            Storage::delete($produk->img_name1);
+        }
+        if ($produk->img_name2) {
+            # code...
+            Storage::delete($produk->img_name2);
+        }
+        if ($produk->img_name3) {
+            # code...
+            Storage::delete($produk->img_name3);
+        }
+        if ($produk->img_name4) {
+            # code...
+            Storage::delete($produk->img_name4);
+        }
         Produk::destroy($produk->id);
         return redirect('/admin/produk')->with('success', "Product $produk->name has been deleted!");
     }

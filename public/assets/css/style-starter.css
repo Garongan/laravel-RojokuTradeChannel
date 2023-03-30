@@ -17534,6 +17534,7 @@ h4.inner-text-title {
   min-height: 1px;
   max-height: none;
   height: auto;
+  border-radius: 0.25rem;
 }
 
 .tm-block {

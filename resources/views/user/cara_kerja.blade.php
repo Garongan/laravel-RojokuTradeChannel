@@ -1,8 +1,8 @@
-@extends('layout/main')
+@extends('user.layout.main')
 @section('content')
 
     <!-- inner banner -->
-    @include('components.inner_banner')
+    @include('user.components.inner_banner')
     <!-- //inner banner -->
 
     <!-- container cara kerja header -->

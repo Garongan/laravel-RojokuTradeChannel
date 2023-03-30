@@ -1,4 +1,4 @@
-@extends('layout/main')
+@extends('user.layout.main')
 @section('content')
     <!-- hero slider Start -->
     <section class="banner-wrap">
@@ -175,7 +175,7 @@
                                 @foreach ($kategori as $item)
                                 <li class="kategori-list" style="width: 10rem;">
                                     <button type="button" class="active border-0 scrollToProduk" onclick="filterSelection('{{ $item->name }}')">
-                                        <img loading="lazy" src="/assets/images/s{{ $item->id }}.jpg" class="card-img-top mt-3" alt="{{ $item->name }}">
+                                        <img loading="lazy" src="{{ asset('/storage/'.$item->image) }}" class="card-img-top mt-3" alt="kategori {{ $item->name }}">
                                         <div class="card-body">
                                             <p class="card-text">{{ $item->name }}</p>
                                         </div>
@@ -208,7 +208,7 @@
                             <ul class="card-wrapper d-flex justify-content-around">
                                 @foreach ($produk as $item)
                                 <li class="card filterDiv {{ $item->kategori->name }}" style="width: 11rem;">
-                                    <img loading="lazy" src="assets/images/{{ $item->img_name }}.jpg" class="card-img-top" alt="kategori 1">
+                                    <img loading="lazy" src="{{ asset('/storage/'.$item->img_name1) }}" class="card-img-top" alt="Product image {{ $item->name }}">
                                     <div class="card-body">
                                     <p class="card-title">{{ $item->name }}</p>
                                     <p class="card-subtitle">Kategori: {{ $item->kategori->name }}</p>
@@ -253,7 +253,7 @@
     <!-- /produk grids -->
 
     <!-- content block -->
-    @include('components.content_block')
+    @include('user.components.content_block')
     <!-- //content block -->
 
     <!-- bertia dan pengumuman grid -->

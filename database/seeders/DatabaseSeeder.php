@@ -29,16 +29,19 @@ class DatabaseSeeder extends Seeder
 
         Kategori::create([
             'name' => 'Elektronik Stuff',
+            'image' => 'kategori-images/kategori1.jpg',
             'slug' => 'elektronik-stuff'
         ]);
 
         Kategori::create([
             'name' => 'Women Style',
+            'image' => 'kategori-images/kategori2.jpg',
             'slug' => 'women-style'
         ]);
 
         Kategori::create([
             'name' => 'Men Stuff Style',
+            'image' => 'kategori-images/kategori3.jpg',
             'slug' => 'men-stuff-style'
         ]);
 

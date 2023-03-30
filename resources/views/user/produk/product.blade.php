@@ -1,8 +1,8 @@
-@extends('layout.main')
+@extends('user.layout.main')
 @section('content')
 
      <!-- inner banner -->
-     @include('components.inner_banner')
+     @include('user.components.inner_banner')
      <!-- //inner banner -->
 
     <!-- produk -->
@@ -26,7 +26,7 @@
                         <ul class="container d-flex hide-scrollbar flex-nowrap row flex-row rounded" id="isi-kategori" style="overflow-x: scroll;">
                             <li class="kategori-list" style="width: 10rem;">
                                 <button type="button" class="active border-0 scrollToProduk" onclick="filterSelection('all')">
-                                    <img loading="lazy" src="assets/images/s8.jpg" class="card-img-top mt-3" alt="all produk">
+                                    <img loading="lazy" src="{{ asset('/storage/kategori-images/kategori_all.jpg') }}" class="card-img-top mt-3" alt="all produk">
                                     <div class="card-body">
                                         <p class="card-text">All Produk</p>
                                     </div>
@@ -35,7 +35,7 @@
                             @foreach ($kategori as $item)
                             <li class="kategori-list" style="width: 10rem;">
                                 <button type="button" class="border-0 scrollToProduk" onclick="filterSelection('{{ $item->name }}')">
-                                    <img loading="lazy" src="assets/images/s{{ $item->id }}.jpg" class="card-img-top mt-3" alt="{{ $item->name }}">
+                                    <img loading="lazy" src="{{ asset('/storage/'.$item->image) }}" class="card-img-top mt-3" alt="kategori {{ $item->name }}">
                                     <div class="card-body">
                                         <p class="card-text">{{ $item->name }}</p>
                                     </div>
@@ -96,7 +96,7 @@
                         <ul class="tab-content row mt-5 justify-content-start">
                             @foreach ($produk as $item)
                             <li class="filterDiv col-sm-6 col-md-6 col-lg-4 col-xl-4 {{ $item->kategori->name }}">
-                                <img loading="lazy" src="assets/images/{{ $item->img_name1 }}.jpg" class="card-img-top" alt="kategori 1">
+                                <img loading="lazy" src="{{ asset('/storage/'.$item->img_name1) }}" class="card-img-top" alt="Product image {{ $item->name }}">
                                 <div class="card-body">
                                 <p>{{ $item->name }}</p>
                                 <p>Kategori: {{ $item->kategori->name }}</p>

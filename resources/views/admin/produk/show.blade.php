@@ -10,10 +10,13 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m10.875 19.3l-6.6-6.6q-.15-.15-.213-.325T4 12q0-.2.063-.375t.212-.325l6.6-6.6q.275-.275.688-.287t.712.287q.3.275.313.688T12.3 6.1L7.4 11h11.175q.425 0 .713.288t.287.712q0 .425-.287.713t-.713.287H7.4l4.9 4.9q.275.275.288.7t-.288.7q-.275.3-.7.3t-.725-.3Z"/></svg>
                         Back to Produk List
                     </a>
-                    <a href="/admin/{{ $produk->id }}/edit" class="btn btn-warning">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 22q-.825 0-1.413-.588T4 20V4q0-.825.588-1.413T6 2h8l6 6v4h-2V9h-5V4H6v16h6v2H6Zm0-2V4v16Zm12.3-5.475l1.075 1.075l-3.875 3.85v1.05h1.05l3.875-3.85l1.05 1.05l-4.3 4.3H14v-3.175l4.3-4.3Zm3.175 3.175L18.3 14.525l1.45-1.45q.275-.275.7-.275t.7.275l1.775 1.775q.275.275.275.7t-.275.7l-1.45 1.45Z"/></svg>
-                        Edit
-                    </a>
+                    <form action="/admin/produk/{{ $produk->id }}/edit" method="get" class="d-inline">
+                        @csrf
+                        <button class="btn bg-warning">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 22q-.825 0-1.413-.588T4 20V4q0-.825.588-1.413T6 2h8l6 6v4h-2V9h-5V4H6v16h6v2H6Zm0-2V4v16Zm12.3-5.475l1.075 1.075l-3.875 3.85v1.05h1.05l3.875-3.85l1.05 1.05l-4.3 4.3H14v-3.175l4.3-4.3Zm3.175 3.175L18.3 14.525l1.45-1.45q.275-.275.7-.275t.7.275l1.775 1.775q.275.275.275.7t-.275.7l-1.45 1.45Z"/></svg>
+                            Edit
+                        </button>
+                    </form>
                     <form action="/admin/produk/{{ $produk->id }}" method="post" class="d-inline">
                         @method('delete')
                         @csrf
@@ -26,7 +29,7 @@
             </div>
             <div class="col-lg-5 mt-5">
                 <div class="card mb-3">
-                    <img class="card-img img-fluid" src="/assets/images/{{ $produk->img_name }}.jpg" alt="Card image cap" id="product-detail">
+                    <img class="card-img img-fluid" src="{{ asset('/storage/'.$produk->img_name1) }}" alt="Product Image 1" id="product-detail">
                 </div>
                 <div class="row me-1">
                     <!--Start Controls-->
@@ -44,13 +47,13 @@
                             <div class="carousel-item active">
                                 <div class="row">
                                     <div class="col-4">
-                                        <a href="#"><img class="produk-img img-fluid col-4" src="/assets/images/s1.jpg" alt="Product Image 1"></a>
+                                        <a href="#"><img class="produk-img img-fluid col-4" src="{{ asset('/storage/'.$produk->img_name2) }}" alt="Product Image 2"></a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="#"><img class="produk-img img-fluid col-4" src="/assets/images/s2.jpg" alt="Product Image 1"></a>
+                                        <a href="#"><img class="produk-img img-fluid col-4" src="{{ asset('/storage/'.$produk->img_name3) }}" alt="Product Image 3"></a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="#"><img class="produk-img img-fluid col-4" src="/assets/images/s3.jpg" alt="Product Image 1"></a>
+                                        <a href="#"><img class="produk-img img-fluid col-4" src="{{ asset('/storage/'.$produk->img_name4) }}" alt="Product Image 4"></a>
                                     </div>
                                 </div>
                             </div>
@@ -60,13 +63,13 @@
                             <div class="carousel-item">
                                 <div class="row">
                                     <div class="col-4">
-                                        <a href="#"><img class="produk-img img-fluid col-4" src="/assets/images/s4.jpg" alt="Product Image 2"></a>
+                                        <a href="#"><img class="produk-img img-fluid col-4" src="{{ asset('/storage/'.$produk->img_name2) }}" alt="Product Image 2"></a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="#"><img class="produk-img img-fluid col-4" src="/assets/images/s5.jpg" alt="Product Image 2"></a>
+                                        <a href="#"><img class="produk-img img-fluid col-4" src="{{ asset('/storage/'.$produk->img_name3) }}" alt="Product Image 3"></a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="#"><img class="produk-img img-fluid col-4" src="/assets/images/s6.jpg" alt="Product Image 2"></a>
+                                        <a href="#"><img class="produk-img img-fluid col-4" src="{{ asset('/storage/'.$produk->img_name4) }}" alt="Product Image 4"></a>
                                     </div>
                                 </div>
                             </div>

@@ -17,7 +17,7 @@ class ProdukController extends Controller
     {
         //
         return view(
-            'user/product',
+            'user/produk/product',
             [
                 "title" => "Produk",
                 "produk" => Produk::all(),
@@ -61,7 +61,7 @@ class ProdukController extends Controller
     {
         //
         return view(
-            'user/single_product',
+            'user/produk/single_product',
             [
                 "title" => 'Detail',
                 "produk" => $produk

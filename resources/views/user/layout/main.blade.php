@@ -165,6 +165,10 @@
     <script src="/assets/js/jquery-3.3.1.min.js"></script>
     <!-- //common jquery plugin -->
 
+    <!-- produck deteil -->
+    <script src="/assets/js/produk-detail.js"></script>
+    <!-- /produk detail -->
+
     <!-- banner slick slider -->
     <script src="/assets/js/slick.js"></script>
     <script src="/assets/js/script.js"></script>

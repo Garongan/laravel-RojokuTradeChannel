@@ -1,8 +1,8 @@
-@extends('layout/main')
+@extends('user.layout.main')
 @section('content')
 
 {{-- inner banner --}}
-@include('components.inner_banner')
+@include('user.components.inner_banner')
 {{-- /inner banner --}}
 
 <!-- single produk container -->
@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-lg-5 mt-5">
                 <div class="card mb-3">
-                    <img class="card-img img-fluid" src="/assets/images/{{ $produk->img_name }}.jpg" alt="Card image cap" id="product-detail">
+                    <img class="card-img img-fluid" src="{{ asset('/storage/'.$produk->img_name1) }}" alt="Card image cap" id="product-detail">
                 </div>
                 <div class="row me-1">
                     <!--Start Controls-->
@@ -29,13 +29,13 @@
                             <div class="carousel-item active">
                                 <div class="row">
                                     <div class="col-4">
-                                        <a href="#"><img class="produk-img img-fluid col-4" src="/assets/images/s1.jpg" alt="Product Image 1"></a>
+                                        <a href="#"><img class="produk-img img-fluid col-4" src="{{ asset('/storage/'.$produk->img_name2) }}" alt="Product Image 1"></a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="#"><img class="produk-img img-fluid col-4" src="/assets/images/s2.jpg" alt="Product Image 1"></a>
+                                        <a href="#"><img class="produk-img img-fluid col-4" src="{{ asset('/storage/'.$produk->img_name3) }}" alt="Product Image 1"></a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="#"><img class="produk-img img-fluid col-4" src="/assets/images/s3.jpg" alt="Product Image 1"></a>
+                                        <a href="#"><img class="produk-img img-fluid col-4" src="{{ asset('/storage/'.$produk->img_name4) }}" alt="Product Image 1"></a>
                                     </div>
                                 </div>
                             </div>
@@ -45,13 +45,13 @@
                             <div class="carousel-item">
                                 <div class="row">
                                     <div class="col-4">
-                                        <a href="#"><img class="produk-img img-fluid col-4" src="/assets/images/s4.jpg" alt="Product Image 2"></a>
+                                        <a href="#"><img class="produk-img img-fluid col-4" src="{{ asset('/storage/'.$produk->img_name2) }}" alt="Product Image 1"></a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="#"><img class="produk-img img-fluid col-4" src="/assets/images/s5.jpg" alt="Product Image 2"></a>
+                                        <a href="#"><img class="produk-img img-fluid col-4" src="{{ asset('/storage/'.$produk->img_name3) }}" alt="Product Image 1"></a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="#"><img class="produk-img img-fluid col-4" src="/assets/images/s6.jpg" alt="Product Image 2"></a>
+                                        <a href="#"><img class="produk-img img-fluid col-4" src="{{ asset('/storage/'.$produk->img_name4) }}" alt="Product Image 1"></a>
                                     </div>
                                 </div>
                             </div>

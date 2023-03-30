@@ -12,7 +12,7 @@ class Produk extends Model
     protected $guarded = ['id'];
 
     protected $fillable = [
-        'name', 'brand', 'harga', 'kategori_id', 'img_name', 'desc', 'publised_at', 'spec'
+        'name', 'brand', 'harga', 'kategori_id', 'img_name1', 'img_name2', 'img_name3', 'img_name4', 'desc', 'publised_at', 'spec'
     ];
     protected $hidden = [
         'id',
