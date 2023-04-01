@@ -6,6 +6,7 @@ use App\Models\Produk;
 use App\Http\Requests\StoreProdukRequest;
 use App\Http\Requests\UpdateProdukRequest;
 use App\Models\Kategori;
+use Illuminate\Support\Str;
 
 class ProdukController extends Controller
 {
@@ -30,6 +31,7 @@ class ProdukController extends Controller
         [
             "title" => "Produk",
             "produk" => $produk,
+            "detail" => "List All ",
             "kategori" => Kategori::all()
         ]
         );
@@ -65,7 +67,9 @@ class ProdukController extends Controller
             'user/produk/single_product',
             [
                 "title" => 'Detail',
-                "produk" => $produk
+                "detail" => Str::headline($produk->name)." ",
+                "produk" => $produk,
+                'related' => Produk::latest()->limit(4)->get(),
             ]
         );
     }

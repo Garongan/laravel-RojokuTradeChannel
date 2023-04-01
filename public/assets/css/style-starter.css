@@ -727,8 +727,9 @@ progress {
 .row-gap-4 {
   row-gap: 1.25rem!important;
 }
-.row-gap-3 {
-  row-gap: 1.5rem!important;
+
+.col-gap-3 {
+  column-gap: 1rem !important;
 }
 
 .col {
@@ -6716,7 +6717,7 @@ fieldset:disabled .btn {
   align-items: center;
   justify-content: center;
   width: fit-content;
-  padding: 1.25rem;
+  padding: 1rem;
   color: var(--primary-color);
   text-align: center;
   background: none;
@@ -7253,6 +7254,10 @@ fieldset:disabled .btn {
 
 .overflow-scroll {
   overflow: scroll !important;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll !important;
 }
 
 .d-inline {
@@ -17747,8 +17752,7 @@ h4.inner-text-title {
 }
 /* /slider produk */
 
-.instagram-embed {
-  overflow-y: scroll;
+.instagram-container {
   scroll-padding-bottom: 1rem;
 }
 .hide-scrollbar::-webkit-scrollbar { width: 0 !important }
@@ -17757,12 +17761,14 @@ h4.inner-text-title {
 
 .hide-scrollbar { -ms-overflow-style: none; }
 
-.instagram-embed .col {
+.instagram-container .col {
   display: flex;
   justify-content: center;
-  padding-left: 0px;
-  padding-right: 0px;
   padding-top: 1rem;
+}
+
+.instagram-container .col:first-child {
+  padding-top: 0rem;
 }
 /* filter produk */
 .filterDiv {
@@ -17781,9 +17787,11 @@ h4.inner-text-title {
 .youtube-embed .col {
   display: flex;
   justify-content: center;
-  padding-left: 0px;
-  padding-right: 0px;
   padding-top: 1rem;
+}
+
+.youtube-embed .col:first-child {
+  padding-top: 0rem;
 }
 /* /youtube-embed */
 /* berita dan pengumuman */
@@ -17795,6 +17803,10 @@ h4.inner-text-title {
 .berita-pengumuman .col {
   display: flex;
   justify-content: center;
+}
+
+.berita-pengumuman .col:first-child {
+  padding-top: 0rem;
 }
 /* /berita dan pengumuman */
 .pagination-info {
@@ -17846,12 +17858,10 @@ body {
   .carousel .carousel-item .card .card-text{
     font-size: 0.6rem !important;
   }
-  .instagram-embed {
+  .instagram-container {
     max-height: 33.248rem;
-    margin-top: 1rem;
   }
   .youtube-embed {
-    margin-top: 1rem;
     max-height: 22.426rem;
   }
   .testimoni-container {
@@ -17895,15 +17905,12 @@ body {
   .navbar-brand {
     width: 15%;
   }
-  .instagram-embed {
+  .instagram-container {
     max-height: 28.972rem;
   }
+  .berita-pengumuman,
   .youtube-embed {
-    padding-left: calc;
     max-height: 28.972rem;
-  }
-  .berita-pengumuman {
-    max-height: 22.176rem;
   }
   .testimoni-container {
     max-height: 19.875rem;
@@ -17932,9 +17939,11 @@ body {
   .navbar .navbar-nav .nav-link {
     font-size: 1rem;
   }
-  .instagram-embed {
+  .produk-container,
+  .instagram-container {
     max-height: 54.98rem;
   }
+  .berita-pengumuman,
   .youtube-embed {
     max-height: 29.359rem;
   }

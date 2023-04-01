@@ -1,13 +1,15 @@
 <?php
 
-use App\Http\Controllers\AdminProdukController;
+use App\Models\News;
+use App\Models\Produk;
+use App\Models\Kategori;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\DashboardController;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProdukController;
-use App\Models\Kategori;
-use App\Models\Produk;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AdminProdukController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,13 +25,14 @@ use Illuminate\Support\Facades\Route;
 // user
 
 // home
-Route::get('/', function (Produk $produk, Kategori $kategori) {
+Route::get('/', function (Produk $produk, Kategori $kategori, News $news) {
     return view(
         'user/home',
         [
             "title" => "Home",
-            "produk" => Produk::latest()->limit(8)->get(),
-            "kategori" => Kategori::all()
+            "produk" => Produk::latest()->limit(7)->get(),
+            "kategori" => Kategori::all(),
+            "news" => News::latest()->limit(7)->get(),
         ]
     );
 });
@@ -42,7 +45,8 @@ Route::get('/about', function () {
     return view(
         'user/about',
         [
-            "title" => "Tentang Kami"
+            "title" => "Tentang Kami",
+            "detail" => "",
         ]
     );
 });
@@ -61,7 +65,8 @@ Route::get('/cara-kerja', function () {
     return view(
         'user/cara_kerja',
         [
-            "title" => "Cara Kerja"
+            "title" => "Cara Kerja",
+            "detail" => "",
         ]
     );
 });
@@ -74,7 +79,8 @@ Route::get('/partner', function () {
     return view(
         'user/partner',
         [
-            "title" => "Partner"
+            "title" => "Partner",
+            "detail" => "",
         ]
     );
 });
@@ -87,7 +93,8 @@ Route::get('/contact', function () {
     return view(
         'user/contact',
         [
-            "title" => "Contact Us"
+            "title" => "Contact Us",
+            "detail" => "",
         ]
     );
 });
@@ -102,14 +109,7 @@ Route::get('/product-detail/{produk:name}', [ProdukController::class, 'show']);
 
 // single news detail
 
-Route::get('/news-detail', function () {
-    return view(
-        'user/single_news',
-        [
-            "title" => "Detail"
-        ]
-    );
-});
+Route::get('/news-detail/{news:title}', [NewsController::class, 'show']);
 
 // single news detail
 

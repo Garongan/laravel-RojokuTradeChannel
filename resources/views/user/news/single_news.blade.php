@@ -1,9 +1,9 @@
-@extends('layout.main')
+@extends('user.layout.main')
 @section('content')
 
     {{-- innner banner --}}
 
-    @include('components.inner_banner')
+    @include('user.components.inner_banner')
     
     {{-- /inner banner --}}
 
@@ -13,17 +13,13 @@
             <div class="col-lg-8">
                 <!-- Blog Detail Start -->
                 <div class="mb-5">
-                    <img class="img-fluid w-100 rounded mb-5" src="/assets/images/b1.jpg" alt="">
+                    <img class="img-fluid w-100 rounded mb-5" src="{{ asset('/storage/'.$news->image) }}" alt="{{ $news->role }}">
+                    <h4 class="text-muted mb-3">{{ $news->role }}</h4>
                     <h1 class="text-uppercase mb-4">
-                        Diam dolor duo ipsum clita sed lorem tempor. Clita kasd diam justo diam
-                        lorem sed amet sed rebum eos.
+                        {{ $news->title }}
                     </h1>
 
-                    <p style="white-space: pre-wrap;">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Id harum illo veniam tempora pariatur maiores dolorem qui modi. Perspiciatis voluptatem similique dolor nostrum magni consequatur blanditiis aliquid quibusdam eveniet molestias?.
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda cupiditate eveniet dolorum, iusto ad quam excepturi, in voluptates cumque odio laboriosam optio incidunt. Sunt eum adipisci aliquid sapiente iusto animi?.
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas hic minima atque cupiditate quis, quasi, ut, corporis natus molestias inventore incidunt consectetur magnam sit? Nemo quo corrupti nostrum molestias est.
-                    </p>
+                    <p style="white-space: pre-wrap;">{{ $news->desc }}</p>
                 </div>
                 <!-- Blog Detail End -->
             </div>
@@ -33,38 +29,16 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas hic minima at
 
                 <!-- Recent Post Start -->
                 <div class="mb-5">
-                    <h3 class="text-uppercase mb-4">Recent Post</h3>
-                    <div class="bg-secon rounded shadow p-4">
+                    <h3 class="title-style text-uppercase mb-4">Recent <span>Post</span></h3>
+                    <div class="bg-secondary rounded shadow p-4">
+                        @foreach ($related as $item)
                         <div class="d-flex mb-3">
-                            <img class="img-fluid" src="/assets/images/b1.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h6 d-flex align-items-center bg-white text-uppercase px-3 mb-0">Lorem ipsum dolor sit amet consec adipis
+                            <img class="img-fluid" src="{{ asset('/storage/'.$item->image) }}" style="width: 100px; height: 100px; object-fit: cover;" alt="{{ $item->role }}">
+                            <a href="/news-detail/{{ $item->title }}" class="h6 d-flex align-items-center bg-body text-uppercase px-3 mb-0">
+                                {{ Str::limit($item->title, 30) }}
                             </a>
                         </div>
-                        <div class="d-flex mb-3">
-                            <img class="img-fluid" src="/assets/images/b2.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h6 d-flex align-items-center bg-white text-uppercase px-3 mb-0">Lorem ipsum dolor sit amet consec adipis
-                            </a>
-                        </div>
-                        <div class="d-flex mb-3">
-                            <img class="img-fluid" src="/assets/images/b3.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h6 d-flex align-items-center bg-white text-uppercase px-3 mb-0">Lorem ipsum dolor sit amet consec adipis
-                            </a>
-                        </div>
-                        <div class="d-flex mb-3">
-                            <img class="img-fluid" src="/assets/images/b4.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h6 d-flex align-items-center bg-white text-uppercase px-3 mb-0">Lorem ipsum dolor sit amet consec adipis
-                            </a>
-                        </div>
-                        <div class="d-flex mb-3">
-                            <img class="img-fluid" src="/assets/images/b1.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h6 d-flex align-items-center bg-white text-uppercase px-3 mb-0">Lorem ipsum dolor sit amet consec adipis
-                            </a>
-                        </div>
-                        <div class="d-flex">
-                            <img class="img-fluid" src="/assets/images/b2.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h6 d-flex align-items-center bg-white text-uppercase px-3 mb-0">Lorem ipsum dolor sit amet consec adipis
-                            </a>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <!-- Recent Post End -->

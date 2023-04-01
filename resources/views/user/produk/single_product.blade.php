@@ -113,90 +113,29 @@
 <!-- Start Article -->
 <section class="py-5">
     <div class="container">
-        <div class="row text-left p-2 pb-3">
-            <h4>Related Products</h4>
-        </div>
+        <h3 class="title-style text-left p-2 pb-4">Related <span>Products</span></h3>
         <div class="row mx-auto carousel">
-            <div class="col-auto">
-                <!-- prev -->
-                <button class="mb-5 carousel-control-prev" id="slideLeft">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2Zm8 15H11.85l5.58 5.573L16 24l-8-8l8-8l1.43 1.393L11.85 15H24Z"/><path fill="none" d="m16 8l1.43 1.393L11.85 15H24v2H11.85l5.58 5.573L16 24l-8-8l8-8z"/></svg>
-                </button>
-                <!-- /prev -->
-            </div>
             <!-- realated list -->
             <div class="col-12">
                 <ul class="container gap-3 d-flex hide-scrollbar flex-nowrap row flex-row rounded" id="isi-produk" style="overflow-x: scroll;">
-                    <li class="col-4 col-md-4 col-lg-3 col-xl-3 kategori-1">
-                        <img loading="lazy" src="/assets/images/s1.jpg" class="card-img-top" alt="kategori 1">
+                    @foreach ($related as $item)
+
+                    <li class="col-4 col-md-4 col-lg-3 col-xl-3">
+                        <img loading="lazy" src="{{ asset('/storage/'.$item->img_name1) }}" class="card-img-top" alt="{{ $item->name }}">
                         <div class="card-body">
-                        <p class="card-title">Produk 1</p>
-                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                        <a href="single-produk.html" class="btn button-primary d-flex" data-bs-toggle="modal" data-bs-target="#produkModal">
+                        <p class="card-title">{{ $item->name }}</p>
+                        <p class="card-subtitle">Harga: <?php echo 'Rp' . number_format($produk->harga); ?></p>
+                        <a href="/product-detail/{{ $item->name }}" class="btn button-primary d-flex" data-bs-toggle="modal" data-bs-target="#produkModal">
                             Lihat
                         </a>
                         </div>
                     </li>
-                    <li class="col-4 col-md-4 col-lg-3 col-xl-3 kategori-2">
-                        <img loading="lazy" src="/assets/images/s7.jpg" class="card-img-top" alt="kategori 2">
-                        <div class="card-body">
-                        <p class="card-title">Produk 1</p>
-                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                        <a href="single-produk.html" class="btn button-primary d-flex" data-bs-toggle="modal" data-bs-target="#produkModal">
-                            Lihat
-                        </a>
-                        </div>
-                    </li>
-                    <li class="col-4 col-md-4 col-lg-3 col-xl-3 kategori-3">
-                        <img loading="lazy" src="/assets/images/s8.jpg" class="card-img-top" alt="kategori 3">
-                        <div class="card-body">
-                        <p class="card-title">Produk 1</p>
-                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                        <a href="single-produk.html" class="btn button-primary d-flex" data-bs-toggle="modal" data-bs-target="#produkModal">
-                            Lihat
-                        </a>
-                        </div>
-                    </li>
-                    <li class="col-4 col-md-4 col-lg-3 col-xl-3 kategori-4">
-                        <img loading="lazy" src="/assets/images/s5.jpg" class="card-img-top" alt="kategori 4">
-                        <div class="card-body">
-                        <p class="card-title">Produk 1</p>
-                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                        <a href="single-produk.html" class="btn button-primary d-flex" data-bs-toggle="modal" data-bs-target="#produkModal">
-                            Lihat
-                        </a>
-                        </div>
-                    </li>
-                    <li class="col-4 col-md-4 col-lg-3 col-xl-3 kategori-3">
-                        <img loading="lazy" src="/assets/images/s8.jpg" class="card-img-top" alt="kategori 3">
-                        <div class="card-body">
-                        <p class="card-title">Produk 1</p>
-                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                        <a href="single-produk.html" class="btn button-primary d-flex" data-bs-toggle="modal" data-bs-target="#produkModal">
-                            Lihat
-                        </a>
-                        </div>
-                    </li>
-                    <li class="col-4 col-md-4 col-lg-3 col-xl-3 kategori-4">
-                        <img loading="lazy" src="/assets/images/s5.jpg" class="card-img-top" alt="kategori 4">
-                        <div class="card-body">
-                        <p class="card-title">Produk 1</p>
-                        <p class="card-subtitle">Harga: xxx.xxx.xxx</p>
-                        <a href="single-produk.html" class="btn button-primary d-flex" data-bs-toggle="modal" data-bs-target="#produkModal">
-                            Lihat
-                        </a>
-                        </div>
-                    </li>
+
+                    @endforeach
                 </ul>
             </div>
             <!-- /related list -->
-            <div class="col-auto">
-                <!-- next -->
-                <button class="mb-5 carousel-control-next me-2" id="slideRight" type="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M2 16A14 14 0 1 0 16 2A14 14 0 0 0 2 16Zm6-1h12.15l-5.58-5.607L16 8l8 8l-8 8l-1.43-1.427L20.15 17H8Z"/><path fill="none" d="m16 8l-1.43 1.393L20.15 15H8v2h12.15l-5.58 5.573L16 24l8-8l-8-8z"/></svg>
-                </button>
-                <!-- /next -->
-            </div>
+            
         </div>
     </div>
 </section>

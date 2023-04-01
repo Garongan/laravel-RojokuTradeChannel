@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\News;
 use Illuminate\Database\Seeder;
-use App\Models\Produk;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-class ProdukSeeder extends Seeder
+class NewsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,6 +16,6 @@ class ProdukSeeder extends Seeder
     public function run()
     {
         //
-        // Produk::factory(16)->create();
+        // News::factory(16)->create();
     }
 }

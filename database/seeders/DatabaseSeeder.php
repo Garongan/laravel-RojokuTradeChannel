@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\News;
 use App\Models\User;
 use App\Models\Produk;
 use App\Models\Kategori;
@@ -25,8 +26,6 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('admin')
         ]);
 
-        Produk::factory(16)->create();
-
         Kategori::create([
             'name' => 'Elektronik Stuff',
             'image' => 'kategori-images/kategori1.jpg',
@@ -45,22 +44,8 @@ class DatabaseSeeder extends Seeder
             'slug' => 'men-stuff-style'
         ]);
 
-        // $brand = 'Mostly';
-        // $time = now();
-        // $order = 1;
-
-        // Produk::factory()->create([
-        //     'name' => 'Kaos TRIP',
-        //     'brand' => $brand,
-        //     'harga' => '15000000',
-        //     'kategori' => 'Baju BAIK',
-        //     'img_name' => 's1',
-        //     'spec' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse. Donec condimentum elementum convallis. Nunc sed orci a diam ultrices aliquet interdum quis nulla.',
-        //     'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse. Donec condimentum elementum convallis. Nunc sed orci a diam ultrices aliquet interdum quis nulla.',
-        //     'published_at' => $time,
-        //     'id' => 'ROJ'.$brand.$order++
-        // ]);
-
+        News::factory(16)->create();
+        Produk::factory(16)->create();
 
     }
 }
