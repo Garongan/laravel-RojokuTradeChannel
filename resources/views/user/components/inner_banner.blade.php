@@ -8,7 +8,7 @@
                 </h6>
                 <h6 class="m-0 px-3 text-body">/</h6>
                 <h6 class="m-0">
-                    <a class="text-body">{{ $title }}</a>
+                    <a href="/{{ Str::slug($title) }}" class="text-body">{{ $title }}</a>
                 </h6>
             </div>
         </div>

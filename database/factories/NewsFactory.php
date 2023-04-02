@@ -17,9 +17,11 @@ class NewsFactory extends Factory
      */
     public function definition()
     {
+        $title = fake()->sentence(10);
         return [
             //
-                'title' => fake()->sentence(10),
+                'title' => $title,
+                'slug' => Str::slug($title),
                 'role' => fake()->randomElement(['Berita', 'Pengumuman']),
                 'image' => 'news-images/b'.fake()->numberBetween(1, 4).'.jpg',
                 'desc' => fake()->paragraph(100),

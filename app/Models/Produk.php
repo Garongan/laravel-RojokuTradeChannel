@@ -36,4 +36,8 @@ class Produk extends Model
     public function kategori(){
         return $this->belongsTo(Kategori::class);
     }
+
+    public function getRouteKeyName(): string {
+        return 'slug';
+    }
 }

@@ -123,7 +123,7 @@
                                 <p>{{ $item->name }}</p>
                                 <p>Kategori: {{ $item->kategori->name }}</p>
                                 <p>Harga: <?php echo 'Rp' . number_format($item['harga']); ?></p>
-                                <a href="/product-detail/{{ $item->name }}" class="btn button-primary d-flex mt-3">
+                                <a href="/produk/{{ $item->slug }}" class="btn button-primary d-flex mt-3">
                                     Lihat
                                 </a>
                                 </div>

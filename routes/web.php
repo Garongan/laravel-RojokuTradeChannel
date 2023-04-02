@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminNewsController;
 use App\Models\News;
 use App\Models\Produk;
 use App\Models\Kategori;
@@ -30,9 +31,9 @@ Route::get('/', function (Produk $produk, Kategori $kategori, News $news) {
         'user/home',
         [
             "title" => "Home",
-            "produk" => Produk::latest()->limit(7)->get(),
+            "produk" => Produk::latest()->limit(8)->get(),
             "kategori" => Kategori::all(),
-            "news" => News::latest()->limit(7)->get(),
+            "news" => News::latest()->limit(8)->get(),
         ]
     );
 });
@@ -41,7 +42,7 @@ Route::get('/', function (Produk $produk, Kategori $kategori, News $news) {
 
 // about
 
-Route::get('/about', function () {
+Route::get('/tentang-kami', function () {
     return view(
         'user/about',
         [
@@ -58,6 +59,10 @@ Route::get('/about', function () {
 Route::resource('/produk', ProdukController::class);
 
 // product end
+
+// news
+Route::resource('/news', NewsController::class);
+// news end
 
 // cara kerja
 
@@ -89,7 +94,7 @@ Route::get('/partner', function () {
 
 // contact
 
-Route::get('/contact', function () {
+Route::get('/contact-us', function () {
     return view(
         'user/contact',
         [
@@ -101,17 +106,6 @@ Route::get('/contact', function () {
 
 // contact end
 
-// produk detail
-
-Route::get('/product-detail/{produk:name}', [ProdukController::class, 'show']);
-
-// detail
-
-// single news detail
-
-Route::get('/news-detail/{news:title}', [NewsController::class, 'show']);
-
-// single news detail
 
 // single bisnis class detail
 
@@ -154,88 +148,11 @@ Route::get('/admin/dashboard', function(Produk $produk, Kategori $kategori) {
 // dashboard end
 
 // produk
-
 Route::resource('/admin/produk', AdminProdukController::class)->middleware('auth');
 // produk end
 
-// create info bisnis
-
-Route::get('/admin/create-info-bisnis', function () {
-    return view(
-        'admin/create_info_bisnis',
-        [
-            "title" => "Create Informasi Bisnis"
-        ]
-    );
-})->middleware('auth');
-
-// create info bisnis end
-
-// create produk
-
-Route::get('/admin/create-produk', [ProdukController::class, 'create'])->middleware('auth');
-
-// create produk end
-
-// create produk
-
-Route::get('/admin/create-news', function () {
-    return view(
-        'admin/create_news',
-        [
-            "title" => "Create News"
-        ]
-    );
-})->middleware('auth');
-
-// create produk end
-
-// update informasi bisnis
-
-Route::get('/admin/update-info-bisnis', function () {
-    return view(
-        'admin/update_info_bisnis',
-        [
-            "title" => "Edit Informasi Bisnis"
-        ]
-    );
-})->middleware('auth');
-
-// update informasi bisnis end
-
-// update news
-
-Route::get('/admin/update-news', function () {
-    return view(
-        'admin/update_news',
-        [
-            "title" => "Edit News"
-        ]
-    );
-})->middleware('auth');
-
-// update informasi bisnis end
-
-// update produk
-
-Route::get('/admin/update-produk', function () {
-    return view(
-        'admin/update_produk',
-        [
-            "title" => "Edit Produk"
-        ]
-    );
-})->middleware('auth');
-
-// update produk end
+// news
+Route::resource('/admin/news', AdminNewsController::class)->middleware('auth');
+// news end
 
 // admin end
-
-Route::get('/admin/tambah-pelanggan', function () {
-    return view(
-        'admin/tambah_pelanggan',
-        [
-            "title" => "Tambah Pelanggan"
-        ]
-    );
-})->middleware('auth');

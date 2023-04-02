@@ -11,7 +11,7 @@
                       <h2 class="tm-block-title d-inline-block">Edit Product</h2>
                     </div>
                   </div>
-                  <form action="/admin/produk/{{ $produk->id }}" method="POST" enctype="multipart/form-data">
+                  <form action="/admin/produk/{{ $produk->slug }}" method="POST" enctype="multipart/form-data">
                     @method('PATCH')
                     <div class="row">
                         @csrf

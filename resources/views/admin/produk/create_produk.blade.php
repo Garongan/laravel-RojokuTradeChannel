@@ -32,7 +32,7 @@
                           {{-- brand produk --}}
                           <div class="form-group mb-3">
                             <label for="brand">Product Brand</label>
-                            <input class="form-control @error('brand') is-invalid @enderror" type="text" name="brand" id="brand" placeholder="Ketika Brand Produk..." value="{{ old('brand') }}" />
+                            <input class="form-control @error('brand') is-invalid @enderror" type="text" name="brand" id="brand" placeholder="Ketik Brand Produk..." value="{{ old('brand') }}" />
                             @error('brand')
                               <div class="invalid-feedback">
                                 {{ $message }}
@@ -44,7 +44,7 @@
                           {{-- harga produk --}}
                           <div class="form-group mb-3">
                             <label for="harga">Harga</label>
-                            <input class="form-control @error('harga') is-invalid @enderror" type="text" name="harga" id="harga" placeholder="Ketika Harga Produk..." value="{{ old('harga') }}" />
+                            <input class="form-control @error('harga') is-invalid @enderror" type="text" name="harga" id="harga" placeholder="Ketik Harga Produk..." value="{{ old('harga') }}" />
                             @error('harga')
                               <div class="invalid-feedback">
                                 {{ $message }}
@@ -76,7 +76,7 @@
                           {{-- desc --}}
                           <div class="form-group mb-3">
                             <label for="desc">Description</label>
-                            <textarea class="form-control @error('desc') is-invalid @enderror" name="desc" id="desc" placeholder="Ketika Deskripsi Produk..." rows="5" value="{{ old('desc') }}"></textarea>
+                            <textarea class="form-control @error('desc') is-invalid @enderror" name="desc" id="desc" placeholder="Ketik Deskripsi Produk..." rows="5" value="{{ old('desc') }}"></textarea>
                             @error('desc')
                               <div class="invalid-feedback">
                                 {{ $message }}
@@ -88,7 +88,7 @@
                           {{-- spec --}}
                           <div class="form-group mb-3">
                             <label for="spec">Specification</label>
-                            <textarea class="form-control @error('spec') is-invalid @enderror" name="spec" id="spec" placeholder="Ketika Spesifikasi Produk..." rows="5" value="{{ old('spec') }}"></textarea>
+                            <textarea class="form-control @error('spec') is-invalid @enderror" name="spec" id="spec" placeholder="Ketik Spesifikasi Produk..." rows="5" value="{{ old('spec') }}"></textarea>
                             @error('spec')
                               <div class="invalid-feedback">
                                 {{ $message }}

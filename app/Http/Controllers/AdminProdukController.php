@@ -44,8 +44,7 @@ class AdminProdukController extends Controller
         [
             "title" => "Create Produk",
             "kategori" => Kategori::all()
-        ]
-    );
+        ]);
     }
 
     /**

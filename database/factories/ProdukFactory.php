@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use SebastianBergmann\CodeCoverage\BranchAndPathCoverageNotSupportedException;
 
@@ -17,9 +18,11 @@ class ProdukFactory extends Factory
      */
     public function definition()
     {
+        $name = fake()->word();
         return [
             //
-                'name' => fake()->word(),
+                'name' => $name,
+                'slug' => Str::slug($name),
                 'brand' => fake()->sentence(3),
                 'harga' => fake()->numberBetween(50000, 1000000),
                 'kategori_id' => fake()->numberBetween(1, 3),

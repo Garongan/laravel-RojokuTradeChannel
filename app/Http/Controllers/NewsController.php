@@ -16,7 +16,13 @@ class NewsController extends Controller
     public function index()
     {
         //
-        return "Welcome to News Area";
+        return view('/user/news/news', 
+        [
+            "title" => "News",
+            "news" => News::latest()->paginate(9),
+            "detail" => "List All ",
+        ]
+        );
     }
 
     /**

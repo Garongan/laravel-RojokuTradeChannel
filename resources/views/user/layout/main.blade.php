@@ -29,11 +29,11 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
                     <ul class="navbar-nav my-3 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item">
-                            <a class="nav-link {{ ( ($title === "Home") || ($title === "Detail") ) ? 'active' : "" }}" aria-current="page" href="/">Home</a>
+                            <a class="nav-link {{ ($title === "Home") ? 'active' : "" }}" aria-current="page" href="/">Home</a>
                         </li>
                         <div class="pembatas-navbar"><span>|</span></div>
                         <li class="nav-item">
-                            <a class="nav-link {{ ($title === "Tentang Kami") ? 'active' : "" }}" href="/about">Tentang Kami</a>
+                            <a class="nav-link {{ ($title === "Tentang Kami") ? 'active' : "" }}" href="/tentang-kami">Tentang Kami</a>
                         </li>
                         <span class="pembatas-navbar">|</span>
                         <li class="nav-item">
@@ -49,7 +49,7 @@
                         </li>
                         <span class="pembatas-navbar">|</span>
                         <li class="nav-item">
-                            <a class="nav-link {{ ($title === "Contact Us") ? 'active' : "" }}" href="/contact">Contact Us</a>
+                            <a class="nav-link {{ ($title === "Contact Us") ? 'active' : "" }}" href="/contact-us">Contact Us</a>
                         </li>
                     </ul>
                     <form action="/produk"class="d-flex search-header">
