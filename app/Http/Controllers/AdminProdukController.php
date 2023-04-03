@@ -183,7 +183,7 @@ class AdminProdukController extends Controller
         Produk::where('id', $produk->id)
                 ->update($validatedData);
 
-        return redirect('/admin/produk')->with('success', "$produk->name has been updated!");
+        return redirect('/admin/produk')->with('success', request('name') . " has been updated!");
     }
 
     /**

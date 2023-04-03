@@ -19,10 +19,9 @@ class NewsController extends Controller
         return view('/user/news/news', 
         [
             "title" => "News",
-            "news" => News::latest()->paginate(9),
+            "news" => News::latest()->filter(request(['search-news']))->paginate(9),
             "detail" => "List All ",
-        ]
-        );
+        ]);
     }
 
     /**

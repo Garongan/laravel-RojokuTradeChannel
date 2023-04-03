@@ -1,8 +1,23 @@
-@extends('layout.main')
+@extends('user.layout.main')
 @section('content')
 
     {{-- inner banner --}}
-    @include('components.inner_banner')
+    <section class="inner-banner py-5">
+        <div class="py-lg-5">
+            <div class="container-fluid pt-4">
+                <h1 class="display-3 mb-3 pt-sm-5 text-center text-body">{{ $detail }}{{ $title }}</h1>
+                <div class="d-flex justify-content-center info-carousel">
+                    <h6 class="m-0">
+                        <a class="text-primary" href="/">Home</a>
+                    </h6>
+                    <h6 class="m-0 px-3 text-body">/</h6>
+                    <h6 class="m-0">
+                        <a href="/bisnis-class" class="text-body">{{ $detail }}</a>
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </section>
     {{-- inner banner --}}
 
     <!-- bisnis keals -->
@@ -12,30 +27,11 @@
 
                 <!-- bisnis kelas Detail Start -->
                 <div class="mb-5">
-                    <img class="img-fluid w-100 rounded mb-5" src="/assets/images/blog1.jpg" alt="">
+                    <img class="img-fluid w-100 rounded mb-5" src="{{ asset('/storage/'.$bisnisClass->image) }}" alt="{{ $bisnisClass->slug }}">
                     <h1 class="text-uppercase mb-4">
-                        Diam dolor duo ipsum clita sed lorem tempor. Clita kasd diam justo diam
-                        lorem sed amet sed rebum eos.
+                        {{ $bisnisClass->title }}
                     </h1>
-                    <p>Sadipscing labore amet rebum est et justo gubergren. Et eirmod ipsum sit diam ut
-                        magna lorem. Nonumy vero labore lorem sanctus rebum et lorem magna kasd, stet
-                        amet magna accusam consetetur eirmod. Kasd accusam sit ipsum sadipscing et at at
-                        sanctus et. Ipsum sit gubergren dolores et, consetetur justo invidunt at et
-                        aliquyam ut et vero clita. Diam sea sea no sed dolores diam nonumy, gubergren
-                        sit stet no diam kasd vero.</p>
-                    <p>Voluptua est takimata stet invidunt sed rebum nonumy stet, clita aliquyam dolores
-                        vero stet consetetur elitr takimata rebum sanctus. Sit sed accusam stet sit
-                        nonumy kasd diam dolores, sanctus lorem kasd duo dolor dolor vero sit et. Labore
-                        ipsum duo sanctus amet eos et. Consetetur no sed et aliquyam ipsum justo et,
-                        clita lorem sit vero amet amet est dolor elitr, stet et no diam sit. Dolor erat
-                        justo dolore sit invidunt.</p>
-                    <p>Diam dolor est labore duo invidunt ipsum clita et, sed et lorem voluptua tempor
-                        invidunt at est sanctus sanctus. Clita dolores sit kasd diam takimata justo diam
-                        lorem sed. Magna amet sed rebum eos. Clita no magna no dolor erat diam tempor
-                        rebum consetetur, sanctus labore sed nonumy diam lorem amet eirmod. No at tempor
-                        sea diam kasd, takimata ea nonumy elitr sadipscing gubergren erat. Gubergren at
-                        lorem invidunt sadipscing rebum sit amet ut ut, voluptua diam dolores at
-                        sadipscing stet. Clita dolor amet dolor ipsum vero ea ea eos.</p>
+                    <p>{{ $bisnisClass->desc }}</p>
                 </div>
                 <!-- bisnis kelas detail End -->
 
@@ -52,13 +48,13 @@
                         <!-- info klas -->
                         <div class="pb-3">
                             <label class="fst-italic opacity-75">Status</label>
-                            <p class="form-control">UMUM</p>
-                            <label class="fst-italic opacity-75 mt-3">Lorem</label>
-                            <p class="form-control">Lorem ipsum</p>
-                            <label class="fst-italic opacity-75 mt-3">Lorem</label>
-                            <p class="form-control">Lorem ipsum</p>
-                            <label class="fst-italic opacity-75 mt-3">Lorem</label>
-                            <p class="form-control">Lorem ipsum</p>
+                            <p class="form-control">{{ $bisnisClass->status }}</p>
+                            <label class="fst-italic opacity-75 mt-3">Model Kelas</label>
+                            <p class="form-control">{{ $bisnisClass->modelKelas }}</p>
+                            <label class="fst-italic opacity-75 mt-3">Tanggal Pelaksanaan</label>
+                            <p class="form-control">{{ $bisnisClass->tglPelaksanaan }}</p>
+                            <label class="fst-italic opacity-75 mt-3">Pemateri</label>
+                            <p class="form-control">{{ $bisnisClass->pemateri }}</p>
                         </div>
                         <!-- info klas -->
 

@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\News;
+use App\Models\Kategori;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class AdminNewsController extends Controller
+class AdminKategoriController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,25 +17,22 @@ class AdminNewsController extends Controller
     public function index()
     {
         //
-        $news = News::latest()->filter(request(['search-news']))->paginate(8);
-        return view('/admin/news/index', 
+        $kategori = Kategori::latest()->filter(request(['search-kategori']))->get();
+        return view('/admin/kategori/index', 
         [
-            "title" => "News",
-            "news" => $news,
+            "title" => "Kategori",
+            "kategori" => $kategori,
         ]);
     }
 
     /**
      * Show the form for creating a new resource.
      *
+     
      */
     public function create()
     {
         //
-        return view('/admin/news/create_news', 
-        [
-            "title" => "Create News",
-        ]);
     }
 
     /**
@@ -48,53 +45,48 @@ class AdminNewsController extends Controller
     {
         //
         $validatedData = $request->validate([
-            'title' => 'required|max:255',
-            'role' => 'required',
+            'name' => 'required|max:64',
             'image' => 'image|file|max:1024',
-            'desc' => 'required',
         ]);
         
         if ($request->hasFile('image')) {
             # code...
-            $validatedData['image'] = $request->file('image')->store('news-images');
+            $validatedData['image'] = $request->file('image')->store('kategori-images');
         }
 
-        $title = request('title');
+        $title = request('name');
 
         $validatedData['slug'] =  Str::slug($title);
         
-        News::create($validatedData);
+        Kategori::create($validatedData);
         
-        return redirect('/admin/news')->with('success', 'New news has been created!');
+        return redirect('/admin/kategori')->with('success', 'New katgori has been created!');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\News  $news
+     * @param  \App\Models\Kategori  $kategori
+     
      */
-    public function show(News $news)
+    public function show(Kategori $kategori)
     {
         //
-        return view('/admin/news/show', [
-            "title" => $news->role . " Detail",
-            'news' => $news
-        ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\News  $news
+     * @param  \App\Models\Kategori  $kategori
      
      */
-    public function edit(News $news)
+    public function edit(Kategori $kategori)
     {
         //
-        return view('/admin/news/update_news',
+        return view('/admin/kategori/update_kategori',
         [
-            "title" => "Update News",
-            "news" => $news,
+            "title" => "Update Kategori",
+            "kategori" => $kategori,
         ]);
     }
 
@@ -102,17 +94,15 @@ class AdminNewsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\News  $news
+     * @param  \App\Models\Kategori  $kategori
      
      */
-    public function update(Request $request, News $news)
+    public function update(Request $request, Kategori $kategori)
     {
         //
         $rules = [
-            'title' => 'required|max:255',
-            'role' => 'required',
+            'name' => 'required|max:64',
             'image' => 'image|file|max:1024',
-            'desc' => 'required',
         ];
 
         $validatedData = $request->validate($rules);
@@ -128,27 +118,27 @@ class AdminNewsController extends Controller
         }
 
         
-        News::where('id', $news->id)
+        Kategori::where('id', $kategori->id)
                 ->update($validatedData);
 
-        return redirect('/admin/news')->with('success', request('title') . " has been updated!");
+        return redirect('/admin/kategori')->with('success', request('name') . " has been updated!");
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\News  $news
+     * @param  \App\Models\Kategori  $kategori
      
      */
-    public function destroy(News $news)
+    public function destroy(Kategori $kategori)
     {
         //
-        if ($news->image) {
+        if ($kategori->image) {
             # code...
-            Storage::delete($news->image);
+            Storage::delete($kategori->image);
         }
 
-        News::destroy($news->id);
-        return redirect('/admin/news')->with('success', $news->role . " $news->title has been deleted!");
+        Kategori::destroy($kategori->id);
+        return redirect('/admin/kategori')->with('success', " $kategori->name has been deleted!");
     }
 }

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Kategori extends Model
+class BisnisClass extends Model
 {
     use HasFactory;
 
@@ -15,14 +15,10 @@ class Kategori extends Model
         return 'slug';
     }
 
-    public function produk(){
-        return $this->hasMany(Produk::class);
-    }
-
     public function scopeFilter($query, array $filters) {
 
-        $query->when($filters['search-kategori'] ?? false, function($query, $search){
-            return $query->where('name', 'like', '%'.$search.'%');
+        $query->when($filters['search-bisnis-class'] ?? false, function($query, $search){
+            return $query->where('title', 'like', '%'.$search.'%');
         });
 
     }

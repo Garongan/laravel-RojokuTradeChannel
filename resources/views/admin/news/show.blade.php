@@ -19,7 +19,7 @@
                 <form action="/admin/news/{{ $news->slug }}" method="post" class="d-inline">
                     @method('delete')
                     @csrf
-                    <button class="btn btn-danger" onclick="return confirm('Are you sure to delete this product?')">
+                    <button class="btn btn-danger" onclick="return confirm('Are you sure to delete this news?')">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m9.4 16.5l2.6-2.6l2.6 2.6l1.4-1.4l-2.6-2.6L16 9.9l-1.4-1.4l-2.6 2.6l-2.6-2.6L8 9.9l2.6 2.6L8 15.1l1.4 1.4ZM7 21q-.825 0-1.413-.588T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.588 1.413T17 21H7ZM17 6H7v13h10V6ZM7 6v13V6Z"/></svg>
                         Delete
                     </button>
@@ -30,7 +30,7 @@
                 <!-- Blog Detail Start -->
                 <div class="mb-5">
                     <img class="img-fluid w-100 rounded mb-5" src="{{ asset('/storage/'.$news->image) }}" alt="{{ $news->role }}">
-                    <h4 class="text-muted mb-3">{{ $news->role }}</h4>
+                    <h4 class="text-muted mb-3">{{ $news->role }} {{ $news->created_at->diffForHumans() }}</h4>
                     <h1 class="text-uppercase mb-4">
                         {{ $news->title }}
                     </h1>

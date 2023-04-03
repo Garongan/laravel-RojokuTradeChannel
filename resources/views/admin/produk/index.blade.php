@@ -1,7 +1,7 @@
 @extends('admin.layout.admin_main')
 @section('content')
 
-<!-- admin isi  -->
+<!-- admin isi producl  -->
 <section class="py-5">
     <div class="container">
         <div class="row">
@@ -168,6 +168,6 @@
         
     </div>
 </section>
-<!-- /admin isi -->
+<!-- /admin isi produk end -->
     
 @endsection

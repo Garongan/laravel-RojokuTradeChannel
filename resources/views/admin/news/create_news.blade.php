@@ -47,7 +47,7 @@
                           {{-- desc --}}
                           <div class="form-group mb-3">
                             <label for="desc">Description</label>
-                            <textarea class="form-control @error('desc') is-invalid @enderror" name="desc" id="desc" placeholder="Ketika Deskripsi Produk..." rows="5" value="{{ old('desc') }}"></textarea>
+                            <textarea class="form-control @error('desc') is-invalid @enderror" name="desc" id="desc" placeholder="Ketika Deskripsi News..." rows="5" > {{ old('desc') }}</textarea>
                             @error('desc')
                               <div class="invalid-feedback">
                                 {{ $message }}

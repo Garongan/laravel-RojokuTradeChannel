@@ -281,7 +281,7 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body ms-3">
-                                    <p class="card-text"><small class="text-muted">{{ $item->role }}</small></p>
+                                    <p class="card-text"><small class="text-muted">{{ $item->role }} {{ $item->created_at->diffForHumans() }}</small></p>
                                     <h5 class="card-title">{{ Str::limit($item->title, 30) }}</h5>
                                     <p class="card-text">{{ Str::limit($item->desc, 60) }}</p>
                                     <a href="/news/{{ $item->slug }}" class="btn button-primary d-flex mt-3">
@@ -324,177 +324,32 @@
     <!-- bussines class info -->
     <section class="w3l-news container py-5">
         <div class="row shadow rounded border border-1">
-            <h3 class="title-style text-start mb-5 px-3">BUSINESS CLASS <span>INFORMATION</span></h3>
+            <a href="/bisnis-class">
+                <h3 class="title-style text-start mb-5 px-3">BUSINESS CLASS <span>INFORMATION</span></h3>
+            </a>
             <div class="col">
                 <ul class="row px-2 row-cols-md-3 row-cols-1 justify-content-center info-list">
+                    @foreach ($bisnisClass as $item)
                     <li class="col content">
                         <div class="grids5-info shadow rounded">
-                            <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="/assets/images/blog1.jpg"
-                                    alt="" class="img-fluid news-image" />
+                            <a href="/bisnis-class/{{ $item->slug }}" class="blog-image d-block zoom"><img loading="lazy" src="{{ asset('/storage/'.$item->image) }}"
+                                    alt="{{ $item->title }}" class="img-fluid news-image" />
                             </a>
                             <div class="blog-info card-body blog-details">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <a href="#author" class="post">Mauree</a>
-                                    <h6 class="date"><i class="fas fa-clock"></i> Nov 16, 2021.</h6>
+                                    <a class="post">{{ $item->author }}</a>
+                                    <h6 class="date">{{ $item->published_at }}</h6>
                                 </div>
         
-                                <h4><a href="#blog" class="blog-desc">
-                                        Info Bisnis 1</a></h4>
-                                <p class="mt-3">At corrupti odit At iure facere,
-                                    porro repellat officia quas, magnam assumenda.</p>
-                                    <a href="/bussines-class-detail" href="/bussines-class-detail" class="d-flex mt-3 text-decoration-underline">
+                                <h4 class="mt-3">{{ Str::limit($item->title, 30) }}</h4>
+                                <p class="mt-3">{{ Str::limit($item->desc, 50) }}</p>
+                                    <a href="/bisnis-class/{{ $item->slug }}" class="d-flex mt-3 text-decoration-underline">
                                         Lihat Informasi
                                     </a>
                             </div>
                         </div>
                     </li>
-                    <li class="col content">
-                        <div class="grids5-info shadow rounded">
-                            <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="/assets/images/blog2.jpg"
-                                    alt="" class="img-fluid news-image" />
-                            </a>
-                            <div class="blog-info card-body blog-details">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <a href="#author" class="post">Mauree</a>
-                                    <h6 class="date"><i class="fas fa-clock"></i> Nov 16, 2021.</h6>
-                                </div>
-        
-                                <h4><a href="#blog" class="blog-desc">
-                                    Info Bisnis 2</a></h4>
-                                <p class="mt-3">At corrupti odit At iure facere,
-                                    porro repellat officia quas, magnam assumenda.</p>
-                                    <a href="/bussines-class-detail" class="d-flex mt-3 text-decoration-underline">
-                                        Lihat Informasi
-                                    </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col content">
-                        <div class="grids5-info shadow rounded">
-                            <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="/assets/images/blog3.jpg"
-                                    alt="" class="img-fluid news-image" />
-                            </a>
-                            <div class="blog-info card-body blog-details">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <a href="#author" class="post">Johnson</a>
-                                    <h6 class="date"><i class="fas fa-clock"></i> Nov 20, 2021.</h6>
-                                </div>
-        
-                                <h4><a href="#blog" class="blog-desc">
-                                    Info Bisnis 3</a></h4>
-                                <p class="mt-3">At corrupti odit At iure facere,
-                                    porro repellat officia quas, magnam assumenda.</p>
-                                    <a href="/bussines-class-detail" class="d-flex mt-3 text-decoration-underline">
-                                        Lihat Informasi
-                                    </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col content">
-                        <div class="grids5-info shadow rounded">
-                            <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="/assets/images/blog1.jpg"
-                                    alt="" class="img-fluid news-image" />
-                            </a>
-                            <div class="blog-info card-body blog-details">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <a href="#author" class="post">Mauree</a>
-                                    <h6 class="date"><i class="fas fa-clock"></i> Nov 16, 2021.</h6>
-                                </div>
-        
-                                <h4><a href="#blog" class="blog-desc">
-                                    Info Bisnis 4</a></h4>
-                                <p class="mt-3">At corrupti odit At iure facere,
-                                    porro repellat officia quas, magnam assumenda.</p>
-                                    <a href="/bussines-class-detail" class="d-flex mt-3 text-decoration-underline">
-                                        Lihat Informasi
-                                    </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col content">
-                        <div class="grids5-info shadow rounded">
-                            <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="/assets/images/blog2.jpg"
-                                    alt="" class="img-fluid news-image" />
-                            </a>
-                            <div class="blog-info card-body blog-details">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <a href="#author" class="post">Mauree</a>
-                                    <h6 class="date"><i class="fas fa-clock"></i> Nov 16, 2021.</h6>
-                                </div>
-        
-                                <h4><a href="#blog" class="blog-desc">
-                                    Info Bisnis 5</a></h4>
-                                <p class="mt-3">At corrupti odit At iure facere,
-                                    porro repellat officia quas, magnam assumenda.</p>
-                                    <a href="/bussines-class-detail" class="d-flex mt-3 text-decoration-underline">
-                                        Lihat Informasi
-                                    </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col content">
-                        <div class="grids5-info shadow rounded">
-                            <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="/assets/images/blog3.jpg"
-                                    alt="" class="img-fluid news-image" />
-                            </a>
-                            <div class="blog-info card-body blog-details">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <a href="#author" class="post">Johnson</a>
-                                    <h6 class="date"><i class="fas fa-clock"></i> Nov 20, 2021.</h6>
-                                </div>
-        
-                                <h4><a href="#blog" class="blog-desc">
-                                    Info Bisnis 6</a></h4>
-                                <p class="mt-3">At corrupti odit At iure facere,
-                                    porro repellat officia quas, magnam assumenda.</p>
-                                    <a href="/bussines-class-detail" class="d-flex mt-3 text-decoration-underline">
-                                        Lihat Informasi
-                                    </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col content">
-                        <div class="grids5-info shadow rounded">
-                            <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="/assets/images/blog1.jpg"
-                                    alt="" class="img-fluid news-image" />
-                            </a>
-                            <div class="blog-info card-body blog-details">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <a href="#author" class="post">Mauree</a>
-                                    <h6 class="date"><i class="fas fa-clock"></i> Nov 16, 2021.</h6>
-                                </div>
-        
-                                <h4><a href="#blog" class="blog-desc">
-                                    Info Bisnis 7</a></h4>
-                                <p class="mt-3">At corrupti odit At iure facere,
-                                    porro repellat officia quas, magnam assumenda.</p>
-                                    <a href="/bussines-class-detail" class="d-flex mt-3 text-decoration-underline">
-                                        Lihat Informasi
-                                    </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col content">
-                        <div class="grids5-info shadow rounded">
-                            <a href="#blog" class="blog-image d-block zoom"><img loading="lazy" src="/assets/images/blog2.jpg"
-                                    alt="" class="img-fluid news-image" />
-                            </a>
-                            <div class="blog-info card-body blog-details">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <a href="#author" class="post">Mauree</a>
-                                    <h6 class="date"><i class="fas fa-clock"></i> Nov 16, 2021.</h6>
-                                </div>
-        
-                                <h4><a href="#blog" class="blog-desc">
-                                    Info Bisnis 8</a></h4>
-                                <p class="mt-3">At corrupti odit At iure facere,
-                                    porro repellat officia quas, magnam assumenda.</p>
-                                    <a href="/bussines-class-detail" class="d-flex mt-3 text-decoration-underline">
-                                        Lihat Informasi
-                                    </a>
-                            </div>
-                        </div>
-                    </li>
+                    @endforeach
                 </ul>
             </div>
             <nav>

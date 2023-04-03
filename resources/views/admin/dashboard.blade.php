@@ -2,13 +2,7 @@
 @section('content')
 
 <!-- admin isi  -->
-<section class="py-5">
-    <div class="container">
-        <div class="row">
-            <h3>Dashboard</h3>
-        </div>
-    </div>
-</section>
+<h3>dashboard</h3>
 <!-- /admin isi -->
     
 @endsection

@@ -5,8 +5,8 @@
 
     <section class="inner-banner py-5">
         <div class="py-lg-5">
-            <div class="container-fluid pt-4 pb-sm-4">
-                <h1 class="display-3 mb-3 text-body">{{ $detail }}{{ $title }}</h1>
+            <div class="container-fluid pt-4">
+                <h1 class="display-3 mb-3 pt-sm-5 text-center text-body">{{ $detail }}{{ $title }}</h1>
                 <div class="d-flex justify-content-center info-carousel">
                     <h6 class="m-0">
                         <a class="text-primary" href="/">Home</a>
@@ -29,7 +29,7 @@
                 <!-- Blog Detail Start -->
                 <div class="mb-5">
                     <img class="img-fluid w-100 rounded mb-5" src="{{ asset('/storage/'.$news->image) }}" alt="{{ $news->role }}">
-                    <h4 class="text-muted mb-3">{{ $news->role }}</h4>
+                    <h4 class="text-muted mb-3">{{ $news->role }} {{ $news->created_at->diffForHumans() }}</h4>
                     <h1 class="text-uppercase mb-4">
                         {{ $news->title }}
                     </h1>

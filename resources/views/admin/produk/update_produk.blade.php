@@ -11,10 +11,11 @@
                       <h2 class="tm-block-title d-inline-block">Edit Product</h2>
                     </div>
                   </div>
+                  {{-- input --}}
                   <form action="/admin/produk/{{ $produk->slug }}" method="POST" enctype="multipart/form-data">
                     @method('PATCH')
+                    @csrf
                     <div class="row">
-                        @csrf
                         <div class="col-md-6 col-12">
                           <div class="form-group mb-3">
                             <label for="name">Product Name</label>
@@ -146,6 +147,7 @@
                     </div>
                     <button type="submit" name="submit" class="mt-3 btn btn-primary btn-block text-uppercase">Update Product</button>
                   </form>
+                  {{-- inpiut --}}
               </div>
             </div>
           </div>

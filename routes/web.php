@@ -1,16 +1,21 @@
 <?php
 
-use App\Http\Controllers\AdminNewsController;
+use App\Http\Controllers\AdminBisnisClassController;
+use App\Http\Controllers\AdminKategoriController;
 use App\Models\News;
+use App\Models\User;
 use App\Models\Produk;
 use App\Models\Kategori;
+use App\Models\BisnisClass;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\AdminNewsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminProdukController;
+use App\Http\Controllers\BisnisClassController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +31,7 @@ use App\Http\Controllers\AdminProdukController;
 // user
 
 // home
-Route::get('/', function (Produk $produk, Kategori $kategori, News $news) {
+Route::get('/', function () {
     return view(
         'user/home',
         [
@@ -34,6 +39,8 @@ Route::get('/', function (Produk $produk, Kategori $kategori, News $news) {
             "produk" => Produk::latest()->limit(8)->get(),
             "kategori" => Kategori::all(),
             "news" => News::latest()->limit(8)->get(),
+            "bisnisClass" => BisnisClass::latest()->limit(6)->get(),
+            "user" => User::all(),
         ]
     );
 });
@@ -63,6 +70,10 @@ Route::resource('/produk', ProdukController::class);
 // news
 Route::resource('/news', NewsController::class);
 // news end
+
+// bisnis class
+Route::resource('/bisnis-class', BisnisClassController::class);
+// bisnis class end
 
 // cara kerja
 
@@ -107,19 +118,6 @@ Route::get('/contact-us', function () {
 // contact end
 
 
-// single bisnis class detail
-
-Route::get('/bussines-class-detail', function () {
-    return view(
-        'user/single_bisnis_class',
-        [
-            "title" => "Detail"
-        ]
-    );
-});
-
-// single bisnis class detail end
-
 // user end
 
 // admin
@@ -134,13 +132,13 @@ Route::post('/logout', [LoginController::class, 'logout'] );
 
 // dashboard
 
-Route::get('/admin/dashboard', function(Produk $produk, Kategori $kategori) {
+Route::get('/admin/dashboard', function() {
     return view(
         'admin/dashboard',
         [
             "title" => "Dashboard",
-            "produk" => $produk::all(),
-            "kategori" => $kategori::all()
+            "produk" => Produk::all(),
+            "kategori" => Kategori::all(),
         ]
     );
 })->middleware('auth');
@@ -151,8 +149,16 @@ Route::get('/admin/dashboard', function(Produk $produk, Kategori $kategori) {
 Route::resource('/admin/produk', AdminProdukController::class)->middleware('auth');
 // produk end
 
+// kategori 
+Route::resource('/admin/kategori', AdminKategoriController::class)->middleware('auth');
+// kategori end
+
 // news
 Route::resource('/admin/news', AdminNewsController::class)->middleware('auth');
+// news end
+
+// news
+Route::resource('/admin/bisnis-class', AdminBisnisClassController::class)->middleware('auth');
 // news end
 
 // admin end

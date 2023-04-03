@@ -42,7 +42,7 @@
                                     </div>
                                     <div class="col">
                                         <div class="card-body">
-                                            <p class="card-text"><small class="text-muted">{{ $item->role }}</small></p>
+                                            <p class="card-text"><small class="text-muted">{{ $item->role }} {{ $item->created_at->diffForHumans() }}</small></p>
                                             <h5 class="card-title">{{ Str::limit($item->title, 30) }}</h5>
                                             <p class="card-text">{{ Str::excerpt($item->desc) }}</p>
                                             <a href="/news/{{ $item->slug }}" class="btn button-primary d-flex mt-3">

@@ -52,17 +52,23 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                      <a class="nav-link {{ ($title === "Kategori") ? 'text-primary' : '' }}" aria-current="page" href="/admin/kategori">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm10 10h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1zM17 3c-2.206 0-4 1.794-4 4s1.794 4 4 4s4-1.794 4-4s-1.794-4-4-4zM7 13c-2.206 0-4 1.794-4 4s1.794 4 4 4s4-1.794 4-4s-1.794-4-4-4z"/></svg>
+                        Kategori Produk
+                      </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link {{ ($title === "News") ? 'text-primary' : '' }}" aria-current="page" href="/admin/news">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 17h5v-2H6v2Zm10 0h2v-2h-2v2ZM6 13h5v-2H6v2Zm10 0h2V7h-2v6ZM6 9h5V7H6v2ZM4 21q-.825 0-1.413-.588T2 19V5q0-.825.588-1.413T4 3h16q.825 0 1.413.588T22 5v14q0 .825-.588 1.413T20 21H4Zm0-2h16V5H4v14Zm0 0V5v14Z"/></svg>
                           News
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ ($title === "Business Class") ? 'text-primary' : '' }}" aria-current="page" href="/admin/bisnis-kelas">
+                        <a class="nav-link {{ ($title === "Bussines Class") ? 'text-primary' : '' }}" aria-current="page" href="/admin/bisnis-class">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4 21q-.825 0-1.413-.588T2 19V8q0-.825.588-1.413T4 6h4V4q0-.825.588-1.413T10 2h4q.825 0 1.413.588T16 4v2h4q.825 0 1.413.588T22 8v11q0 .825-.588 1.413T20 21H4Zm6-15h4V4h-4v2Zm10 9h-5v2H9v-2H4v4h16v-4Zm-9 0h2v-2h-2v2Zm-7-2h5v-2h6v2h5V8H4v5Zm8 1Z"/></svg>
                           Business Class
                         </a>
-                      </li>
+                    </li>
                   </ul>
                 </div>
               </nav>
@@ -78,7 +84,7 @@
     {{-- side bar --}}
 
     <!-- footer -->
-    <footer class="bg-secondary">
+    <footer class="bg-secondary sticky-bottom">
         <div class="container">
             <div class="w-100 py-3">
                 <div class="container">
