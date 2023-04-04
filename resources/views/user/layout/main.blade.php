@@ -241,6 +241,17 @@
         };
     </script>
 
+    {{-- script to same hegith start --}}
+
+    <script>
+        $(document).ready(function () {
+            var height = $('#produk-container').height();
+            $('#instagram-container').height(height-114.92);
+        });
+    </script>
+
+    {{-- script to same haigth end --}}
+
     <!-- bisnis class pagination -->
     <script async src="/assets/js/bisnis-class-pagination.js"></script>
     <!-- /bisnis class pagination -->

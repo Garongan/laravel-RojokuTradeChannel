@@ -17905,8 +17905,9 @@ body {
   .navbar-brand {
     width: 15%;
   }
+  .produk-container,
   .instagram-container {
-    max-height: 28.972rem;
+    max-height: 28.972rem !important;
   }
   .berita-pengumuman,
   .youtube-embed {
@@ -17939,10 +17940,7 @@ body {
   .navbar .navbar-nav .nav-link {
     font-size: 1rem;
   }
-  .produk-container,
-  .instagram-container {
-    max-height: 54.98rem;
-  }
+  
   .berita-pengumuman,
   .youtube-embed {
     max-height: 29.359rem;
