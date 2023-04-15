@@ -6,6 +6,7 @@ use App\Models\Produk;
 use App\Models\Kategori;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class AdminProdukController extends Controller
 {
@@ -85,6 +86,10 @@ class AdminProdukController extends Controller
             # code...
             $validatedData['img_name4'] = $request->file('img_name4')->store('produk-images');
         }
+
+        $name = request('name');
+
+        $validatedData['slug'] =  Str::slug($name);
         
         Produk::create($validatedData);
         

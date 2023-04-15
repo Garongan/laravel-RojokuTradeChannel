@@ -13,7 +13,7 @@ class Produk extends Model
     protected $with = ['kategori'];
 
     protected $fillable = [
-        'name', 'brand', 'harga', 'kategori_id', 'img_name1', 'img_name2', 'img_name3', 'img_name4', 'desc', 'publised_at', 'spec'
+        'name', 'slug' , 'brand', 'harga', 'kategori_id', 'img_name1', 'img_name2', 'img_name3', 'img_name4', 'desc', 'publised_at', 'spec'
     ];
     protected $hidden = [
         'id',

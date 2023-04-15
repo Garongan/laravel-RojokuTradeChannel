@@ -244,10 +244,13 @@
     {{-- script to same hegith start --}}
 
     <script>
-        $(document).ready(function () {
-            var height = $('#produk-container').height();
-            $('#instagram-container').height(height-114.92);
-        });
+        // get the same height of instagram and produk
+        document.onreadystatechange = function () {
+            if (document.readyState == "complete") {
+                var height = $('#produk-container').height();
+                $('#instagram-container').height(height-114.92);
+            }
+        };
     </script>
 
     {{-- script to same haigth end --}}
