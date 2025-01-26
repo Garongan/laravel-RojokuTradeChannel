@@ -40,7 +40,6 @@ Route::get('/', function () {
             "kategori" => Kategori::all(),
             "news" => News::latest()->limit(8)->get(),
             "bisnisClass" => BisnisClass::latest()->limit(6)->get(),
-            "user" => User::all(),
         ]
     );
 });

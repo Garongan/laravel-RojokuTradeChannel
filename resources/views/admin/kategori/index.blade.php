@@ -52,7 +52,7 @@
             <div class="card mb-3 border-0 bg-white shadow">
                 <div class="row row-cols-1">
                   <div class="col">
-                      <img src="{{ asset('/storage/'.$item->image) }}" class="img-fluid p-3" alt="{{ $item->name }}">
+                      <img src="{{ asset('assets/'.$item->image) }}" class="img-fluid p-3" alt="{{ $item->name }}">
                   </div>
                   <div class="col">
                       <div class="card-body">

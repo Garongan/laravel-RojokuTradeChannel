@@ -29,7 +29,7 @@
                                     @csrf
                                     <input type="hidden" name="kategori" id="kategori" value="0">
                                     <button type="submit" class="border-0">
-                                        <img loading="lazy" src="{{ asset('/storage/kategori-images/kategori_all.jpg') }}" class="card-img-top mt-3" alt="all produk">
+                                        <img loading="lazy" src="{{ asset('assets/images/category-all.jpg') }}" class="card-img-top mt-3" alt="all produk">
                                         <div class="card-body">
                                             <p class="card-text">All Produk</p>
                                         </div>
@@ -42,7 +42,7 @@
                                     @csrf
                                     <input type="hidden" name="kategori" id="kategori" value="{{ $item->id }}">
                                     <button type="submit" class="border-0">
-                                        <img loading="lazy" src="{{ asset('/storage/'.$item->image) }}" class="card-img-top mt-3" alt="kategori {{ $item->name }}">
+                                        <img loading="lazy" src="{{ asset('assets/'.$item->image) }}" class="card-img-top mt-3" alt="kategori {{ $item->name }}">
                                         <div class="card-body">
                                             <p class="card-text">{{ $item->name }}</p>
                                         </div>
